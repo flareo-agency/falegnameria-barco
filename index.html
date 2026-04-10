@@ -572,6 +572,37 @@ main { padding-top: var(--nav-h); }
 .list-naked li span:last-child { color: var(--ink-mute); font-size: 14px; max-width: 42ch; text-align: right; }
 @media (max-width: 640px) { .list-naked li { flex-direction: column; gap: 6px; } .list-naked li span:last-child { text-align: left; } }
 
+/* Wood essence variant — circular closeup beside each row */
+.list-naked--wood li { align-items: center; }
+.list-naked--wood .essence-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-left: 20px;
+  border: 1px solid var(--line);
+  background: var(--cream-2);
+  transition: transform 0.5s var(--ease);
+}
+.list-naked--wood .essence-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.list-naked--wood li:hover .essence-circle { transform: scale(1.06); }
+@media (max-width: 640px) {
+  .list-naked--wood li { flex-direction: row; align-items: center; gap: 16px; padding-right: 0; }
+  .list-naked--wood li > span:first-child { flex: 0 0 auto; }
+  .list-naked--wood li > span:nth-child(2) { flex: 1; font-size: 12px; text-align: left; }
+  .list-naked--wood .essence-circle {
+    width: 48px;
+    height: 48px;
+    margin-left: auto;
+  }
+}
+
 .tag {
   display: inline-block;
   font-size: 11px;
@@ -1361,13 +1392,13 @@ main { padding-top: var(--nav-h); }
 
   <section class="section">
     <div class="wrap">
-      <ul class="list-naked">
-        <li><span>01 — Abete</span><span>Leggero, elegante, perfetto per stili classici e serramenti tradizionali.</span></li>
-        <li><span>02 — Larice</span><span>Robusto, ricco di resina, naturalmente resistente agli agenti atmosferici. Ideale per l'outdoor.</span></li>
-        <li><span>03 — Rovere</span><span>Nobile, longevo, versatile. Il legno dei progetti che vogliono durare decenni.</span></li>
-        <li><span>04 — Frassino</span><span>Resistente con venature espressive. Ottimo per pavimenti e strutture esposte.</span></li>
-        <li><span>05 — Noce</span><span>Scuro, prestigioso, caldo. L'essenza dei mobili d'autore e degli ambienti sofisticati.</span></li>
-        <li><span>06 — Ciliegio</span><span>Caldo, affascinante, con tonalità rossastre che maturano nel tempo.</span></li>
+      <ul class="list-naked list-naked--wood">
+        <li><span>01 — Abete</span><span>Leggero, elegante, perfetto per stili classici e serramenti tradizionali.</span><div class="essence-circle"><img src="https://images.unsplash.com/photo-1572852515703-596a50742d44?auto=format&fit=crop&w=200&q=80" alt="Venatura abete"></div></li>
+        <li><span>02 — Larice</span><span>Robusto, ricco di resina, naturalmente resistente agli agenti atmosferici. Ideale per l'outdoor.</span><div class="essence-circle"><img src="https://images.unsplash.com/photo-1571205086863-9d186c5cb8fb?auto=format&fit=crop&w=200&q=80" alt="Venatura larice"></div></li>
+        <li><span>03 — Rovere</span><span>Nobile, longevo, versatile. Il legno dei progetti che vogliono durare decenni.</span><div class="essence-circle"><img src="https://images.unsplash.com/photo-1516557611744-cd25500edf64?auto=format&fit=crop&w=200&q=80" alt="Venatura rovere"></div></li>
+        <li><span>04 — Frassino</span><span>Resistente con venature espressive. Ottimo per pavimenti e strutture esposte.</span><div class="essence-circle"><img src="https://images.unsplash.com/photo-1688274165311-15de2165d686?auto=format&fit=crop&w=200&q=80" alt="Venatura frassino"></div></li>
+        <li><span>05 — Noce</span><span>Scuro, prestigioso, caldo. L'essenza dei mobili d'autore e degli ambienti sofisticati.</span><div class="essence-circle"><img src="https://images.unsplash.com/photo-1736506159893-22cca29b8018?auto=format&fit=crop&w=200&q=80" alt="Venatura noce"></div></li>
+        <li><span>06 — Ciliegio</span><span>Caldo, affascinante, con tonalità rossastre che maturano nel tempo.</span><div class="essence-circle"><img src="https://images.unsplash.com/photo-1677337919711-cf7c12825de0?auto=format&fit=crop&w=200&q=80" alt="Venatura ciliegio"></div></li>
       </ul>
     </div>
   </section>
