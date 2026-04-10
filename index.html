@@ -321,18 +321,18 @@ main { padding-top: var(--nav-h); }
   will-change: opacity, transform, filter;
   transition:
     opacity 1200ms var(--ease),
-    transform 1600ms var(--ease),
+    transform 1400ms var(--ease),
     filter 900ms var(--ease);
 }
 .hero-slider__img.is-active {
   opacity: 1;
-  transform: scale(1);
   filter: saturate(0.9) contrast(1.02) blur(0);
-  animation: heroKenBurns 7s var(--ease-long) 120ms forwards;
+  animation: heroEnter 8000ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
-@keyframes heroKenBurns {
-  from { transform: scale(1); }
-  to   { transform: scale(1.04); }
+@keyframes heroEnter {
+  0%   { transform: scale(1.06); }
+  18%  { transform: scale(1); }
+  100% { transform: scale(1.045); }
 }
 .hero-slider:hover .hero-slider__img.is-active {
   filter: saturate(1) contrast(1.02) blur(0);
