@@ -374,6 +374,73 @@ main { padding-top: var(--nav-h); }
   margin-top: 10px;
 }
 
+/* TEAM CARDS */
+.team-grid { row-gap: clamp(48px, 6vw, 80px); }
+@media (max-width: 1100px) { .team-grid { grid-template-columns: 1fr 1fr !important; gap: clamp(32px, 4vw, 56px) !important; } }
+@media (max-width: 600px)  { .team-grid { grid-template-columns: 1fr !important; } }
+
+.team-card { display: flex; flex-direction: column; }
+.team-card__media {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--cream-2);
+  margin-bottom: 22px;
+}
+.team-card__media img {
+  transition: transform 0.8s var(--ease-long), filter 0.6s var(--ease);
+}
+.team-card:hover .team-card__media img { transform: scale(1.03); filter: saturate(1); }
+.team-card__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-mute);
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+}
+.team-card__name {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 2.4vw, 40px);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  margin-top: 14px;
+}
+.team-card__role {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  margin-top: 10px;
+  min-height: 42px;
+}
+.team-card__meta { margin-top: 18px; }
+.team-card__meta li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+}
+.team-card__meta li:last-child { border-bottom: 1px solid var(--line); }
+.team-card__meta li > span:first-child {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-mute);
+  font-size: 11px;
+  align-self: center;
+}
+.team-card__meta li > span:last-child { font-variant-numeric: tabular-nums; }
+.team-card__cta {
+  margin-top: 22px;
+  align-self: flex-start;
+  font-size: 13px;
+  padding: 12px 22px;
+}
+
 .feature-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -647,7 +714,16 @@ main { padding-top: var(--nav-h); }
   <section>
     <div class="wrap">
       <div style="aspect-ratio: 21/9; overflow:hidden; background: var(--cream-2);" class="reveal">
-        <img src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/05/imerio-barco-marangon-1.jpg" alt="Imerio Barco — marangon al lavoro" style="width:100%; height:100%; object-fit:cover; object-position: center 30%; filter: saturate(0.9);">
+        <img src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/10/falegnameria-artigiana-barco.jpg" alt="Falegnameria artigiana Barco — la squadra" style="width:100%; height:100%; object-fit:cover; filter: saturate(0.9);">
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO IMAGE · SECONDARY -->
+  <section style="margin-top: clamp(16px, 2vw, 24px);">
+    <div class="wrap">
+      <div style="aspect-ratio: 21/9; overflow:hidden; background: var(--cream-2);" class="reveal">
+        <img src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/10/piallatura-legno-falegname.jpg" alt="Piallatura del legno — artigianato Barco" style="width:100%; height:100%; object-fit:cover; filter: saturate(0.9);">
       </div>
     </div>
   </section>
@@ -746,6 +822,82 @@ main { padding-top: var(--nav-h); }
         <div class="reveal" style="aspect-ratio: 4/5; overflow:hidden; background: var(--cream-2);">
           <img src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/05/imerio-barco-marangon-1.jpg" alt="Imerio Barco marangon" style="width:100%; height:100%; object-fit:cover; filter: saturate(0.85);">
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM · QUESTI SIAMO NOI -->
+  <section class="section">
+    <div class="wrap">
+      <div class="meta-row reveal">
+        <span class="eyebrow">— La squadra</span>
+        <span class="eyebrow">4 artigiani · Una famiglia</span>
+      </div>
+      <h2 class="big reveal" style="margin-top: 18px; max-width: 18ch;">Questi siamo noi.</h2>
+      <p class="lead reveal" style="margin-top: 24px; max-width: 56ch;">Una squadra competente ed esperta al tuo servizio per gestire al meglio ogni commissione.</p>
+
+      <div class="grid-4 team-grid" style="margin-top: clamp(48px, 6vw, 96px);">
+
+        <figure class="team-card reveal">
+          <div class="team-card__media">
+            <img src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/05/falegnameria-barco-flavio-600x600.jpg" alt="Flavio Barco — legale rappresentante" style="width:100%; height:100%; object-fit:cover; filter: saturate(0.9);">
+          </div>
+          <figcaption>
+            <div class="team-card__row"><span>01</span><span>Flavio Barco</span></div>
+            <h3 class="team-card__name">Flavio</h3>
+            <p class="team-card__role">Legale rappresentante<br>Responsabile cantiere</p>
+            <ul class="list-naked team-card__meta">
+              <li><span>Mobile</span><span>336 28 30 77</span></li>
+            </ul>
+            <a class="btn team-card__cta" href="mailto:info@falegnameriabarco.it?subject=Scrivi%20a%20Flavio">scrivi a Flavio <span class="arrow">→</span></a>
+          </figcaption>
+        </figure>
+
+        <figure class="team-card reveal">
+          <div class="team-card__media">
+            <img src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/05/luca-barco-mobili-su-misura-600x600.jpg" alt="Luca Barco — responsabile installazioni" style="width:100%; height:100%; object-fit:cover; filter: saturate(0.9);">
+          </div>
+          <figcaption>
+            <div class="team-card__row"><span>02</span><span>Luca Barco</span></div>
+            <h3 class="team-card__name">Luca</h3>
+            <p class="team-card__role">Responsabile cantiere<br>Responsabile installazioni</p>
+            <ul class="list-naked team-card__meta">
+              <li><span>Mobile</span><span>339 565 99 48</span></li>
+            </ul>
+            <a class="btn team-card__cta" href="mailto:info@falegnameriabarco.it?subject=Scrivi%20a%20Luca">scrivi a Luca <span class="arrow">→</span></a>
+          </figcaption>
+        </figure>
+
+        <figure class="team-card reveal">
+          <div class="team-card__media">
+            <img src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/05/falegname-nicola-barco-600x600.jpg" alt="Nicola Barco — controllo qualità" style="width:100%; height:100%; object-fit:cover; filter: saturate(0.9);">
+          </div>
+          <figcaption>
+            <div class="team-card__row"><span>03</span><span>Nicola Barco</span></div>
+            <h3 class="team-card__name">Nicola</h3>
+            <p class="team-card__role">Controllo qualità<br>Produzione</p>
+            <ul class="list-naked team-card__meta">
+              <li><span>Mobile</span><span>338 86 83 247</span></li>
+            </ul>
+            <a class="btn team-card__cta" href="mailto:info@falegnameriabarco.it?subject=Scrivi%20a%20Nicola">scrivi a Nicola <span class="arrow">→</span></a>
+          </figcaption>
+        </figure>
+
+        <figure class="team-card reveal">
+          <div class="team-card__media">
+            <img src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/05/verniciatura-mobili-barco-federico-600x600.jpg" alt="Federico Barco — responsabile verniciatura" style="width:100%; height:100%; object-fit:cover; filter: saturate(0.9);">
+          </div>
+          <figcaption>
+            <div class="team-card__row"><span>04</span><span>Federico Barco</span></div>
+            <h3 class="team-card__name">Federico</h3>
+            <p class="team-card__role">Responsabile verniciatura<br>Produzione</p>
+            <ul class="list-naked team-card__meta">
+              <li><span>Mobile</span><span>339 14 20 582</span></li>
+            </ul>
+            <a class="btn team-card__cta" href="mailto:info@falegnameriabarco.it?subject=Scrivi%20a%20Federico">scrivi a Federico <span class="arrow">→</span></a>
+          </figcaption>
+        </figure>
+
       </div>
     </div>
   </section>
