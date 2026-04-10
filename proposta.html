@@ -1,899 +1,1079 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proposta Commerciale - Falegnameria Barco</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html, body {
-            font-family: 'Inter', sans-serif;
-            color: #0A0A0A;
-            line-height: 1.6;
-            background: #EEECEC;
-        }
-
-        /* Print Styles */
-        @media print {
-            body {
-                background: white;
-                margin: 0;
-                padding: 0;
-            }
-            .proposal {
-                max-width: 100%;
-                box-shadow: none;
-                margin: 0;
-            }
-            .no-print {
-                display: none;
-            }
-        }
-
-        .proposal {
-            max-width: 900px;
-            margin: 40px auto;
-            background: white;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        /* Header */
-        .header {
-            padding: 60px 50px;
-            background: linear-gradient(135deg, #0A0A0A 0%, #1a1a1a 100%);
-            color: white;
-            border-bottom: 8px solid #E8430A;
-        }
-
-        .logo {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 28px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            margin-bottom: 40px;
-            color: #E8430A;
-        }
-
-        .header-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .header-subtitle {
-            font-size: 16px;
-            color: #ccc;
-            margin-bottom: 30px;
-        }
-
-        .header-meta {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            font-size: 14px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            padding-top: 20px;
-        }
-
-        .header-meta div {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .header-meta label {
-            color: #999;
-            font-size: 12px;
-            text-transform: uppercase;
-            margin-bottom: 4px;
-        }
-
-        /* Content Sections */
-        .section {
-            padding: 50px;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .section:last-of-type {
-            border-bottom: none;
-        }
-
-        .section-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 30px;
-            color: #0A0A0A;
-            padding-bottom: 15px;
-            border-bottom: 3px solid #E8430A;
-            display: inline-block;
-        }
-
-        .section-content {
-            margin-top: 25px;
-        }
-
-        .issue-list {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .issue-item {
-            background: #f9f7f5;
-            padding: 20px;
-            border-left: 4px solid #E8430A;
-            border-radius: 4px;
-        }
-
-        .issue-item h4 {
-            font-size: 14px;
-            font-weight: 600;
-            color: #E8430A;
-            margin-bottom: 6px;
-            text-transform: uppercase;
-        }
-
-        .issue-item p {
-            font-size: 13px;
-            color: #555;
-            line-height: 1.5;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 25px;
-            margin-top: 25px;
-        }
-
-        .feature-box {
-            background: #f9f7f5;
-            padding: 25px;
-            border-radius: 6px;
-            text-align: center;
-        }
-
-        .feature-icon {
-            font-size: 32px;
-            margin-bottom: 12px;
-        }
-
-        .feature-box h4 {
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #0A0A0A;
-        }
-
-        .feature-box p {
-            font-size: 13px;
-            color: #666;
-        }
-
-        /* Prototype Section */
-        .prototype-cta {
-            background: linear-gradient(135deg, #f9f7f5 0%, #faf8f6 100%);
-            padding: 40px;
-            border-radius: 6px;
-            margin-top: 25px;
-            text-align: center;
-            border: 2px solid #E8430A;
-        }
-
-        .prototype-cta p {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 14px 35px;
-            background: #E8430A;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 600;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background: #d63807;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(232, 67, 10, 0.3);
-        }
-
-        .btn.secondary {
-            background: #6c757d;
-        }
-
-        .btn.secondary:hover {
-            background: #5a6268;
-        }
-
-        /* Pricing Tiers */
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 25px;
-            margin-top: 30px;
-        }
-
-        .pricing-tier {
-            border: 2px solid #e0e0e0;
-            border-radius: 6px;
-            padding: 30px;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .pricing-tier:hover {
-            border-color: #E8430A;
-            box-shadow: 0 8px 25px rgba(232, 67, 10, 0.15);
-        }
-
-        .pricing-tier.featured {
-            border-color: #E8430A;
-            background: linear-gradient(135deg, rgba(232, 67, 10, 0.05) 0%, transparent 100%);
-            transform: scale(1.02);
-        }
-
-        .tier-badge {
-            display: inline-block;
-            font-size: 11px;
-            font-weight: 700;
-            padding: 6px 12px;
-            border-radius: 3px;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-
-        .badge-base {
-            background: #e3f2fd;
-            color: #1976d2;
-        }
-
-        .badge-premium {
-            background: #fff3e0;
-            color: #E8430A;
-        }
-
-        .badge-enterprise {
-            background: #f5f5f5;
-            color: #0A0A0A;
-        }
-
-        .tier-name {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 8px;
-            color: #0A0A0A;
-        }
-
-        .tier-price {
-            font-size: 28px;
-            font-weight: 700;
-            color: #E8430A;
-            margin-bottom: 20px;
-        }
-
-        .tier-price .currency {
-            font-size: 18px;
-        }
-
-        .tier-description {
-            font-size: 13px;
-            color: #666;
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        .tier-features {
-            list-style: none;
-            margin-bottom: 25px;
-        }
-
-        .tier-features li {
-            font-size: 13px;
-            color: #555;
-            padding: 8px 0;
-            display: flex;
-            align-items: flex-start;
-        }
-
-        .tier-features li:before {
-            content: "✓";
-            color: #E8430A;
-            font-weight: bold;
-            margin-right: 10px;
-            margin-top: 1px;
-        }
-
-        .tier-cta {
-            width: 100%;
-            padding: 12px;
-            background: #E8430A;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 600;
-            font-size: 13px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .tier-cta:hover {
-            background: #d63807;
-        }
-
-        /* Timeline */
-        .timeline {
-            margin-top: 30px;
-            position: relative;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 30px;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: #E8430A;
-        }
-
-        .timeline-item {
-            margin-left: 100px;
-            margin-bottom: 30px;
-            position: relative;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            width: 16px;
-            height: 16px;
-            background: #E8430A;
-            border: 4px solid white;
-            border-radius: 50%;
-            left: -98px;
-            top: 4px;
-            box-shadow: 0 0 0 2px #E8430A;
-        }
-
-        .timeline-item h4 {
-            font-size: 14px;
-            font-weight: 600;
-            color: #0A0A0A;
-            margin-bottom: 6px;
-        }
-
-        .timeline-item p {
-            font-size: 13px;
-            color: #666;
-        }
-
-        .timeline-duration {
-            font-size: 12px;
-            color: #E8430A;
-            font-weight: 600;
-            margin-top: 4px;
-        }
-
-        /* Why Flareo */
-        .why-flareo {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-top: 25px;
-        }
-
-        .why-item {
-            display: flex;
-            gap: 15px;
-        }
-
-        .why-icon {
-            font-size: 28px;
-            min-width: 40px;
-        }
-
-        .why-content h4 {
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 6px;
-            color: #0A0A0A;
-        }
-
-        .why-content p {
-            font-size: 13px;
-            color: #666;
-        }
-
-        /* Footer */
-        .footer {
-            background: #0A0A0A;
-            color: white;
-            padding: 40px 50px;
-            text-align: center;
-            border-top: 8px solid #E8430A;
-        }
-
-        .footer-content {
-            margin-bottom: 20px;
-        }
-
-        .footer-section {
-            margin-bottom: 15px;
-        }
-
-        .footer-section label {
-            font-size: 12px;
-            color: #999;
-            text-transform: uppercase;
-            display: block;
-            margin-bottom: 6px;
-        }
-
-        .footer-section a {
-            color: #E8430A;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .footer-section a:hover {
-            text-decoration: underline;
-        }
-
-        .footer-divider {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            margin: 20px 0;
-            padding: 20px 0 0 0;
-        }
-
-        .footer-note {
-            font-size: 12px;
-            color: #999;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .proposal {
-                margin: 20px;
-            }
-
-            .header {
-                padding: 40px 30px;
-            }
-
-            .header-title {
-                font-size: 32px;
-            }
-
-            .section {
-                padding: 30px;
-            }
-
-            .section-title {
-                font-size: 24px;
-            }
-
-            .issue-list {
-                grid-template-columns: 1fr;
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .pricing-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .pricing-tier.featured {
-                transform: scale(1);
-            }
-
-            .why-flareo {
-                grid-template-columns: 1fr;
-            }
-
-            .header-meta {
-                grid-template-columns: 1fr;
-            }
-
-            .timeline::before {
-                left: 20px;
-            }
-
-            .timeline-item {
-                margin-left: 70px;
-            }
-
-            .timeline-item::before {
-                left: -68px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .header {
-                padding: 30px 20px;
-            }
-
-            .header-title {
-                font-size: 24px;
-            }
-
-            .section {
-                padding: 20px;
-            }
-
-            .section-title {
-                font-size: 20px;
-            }
-
-            .logo {
-                font-size: 22px;
-            }
-        }
-
-        /* Print optimization */
-        @page {
-            margin: 20mm;
-        }
-
-        @media print {
-            .section {
-                page-break-inside: avoid;
-            }
-
-            .pricing-tier {
-                page-break-inside: avoid;
-            }
-
-            a {
-                color: #E8430A;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposta Commerciale — Falegnameria Barco | Flareo Studio</title>
+<meta name="description" content="Proposta commerciale Flareo Studio per il redesign del sito Falegnameria Barco. Tre generazioni di artigiani del legno meritano un sito all'altezza.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   PROPOSTA · FALEGNAMERIA BARCO
+   Same style system as v2 editorial prototype
+   Cream + Ink · EB Garamond + Inter
+   ========================================================= */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cream: #EDE7DE;
+  --cream-2: #E5DED3;
+  --ink: #1A1A1A;
+  --ink-soft: #3A3A3A;
+  --ink-mute: #7A736A;
+  --line: rgba(26, 26, 26, 0.12);
+  --line-strong: rgba(26, 26, 26, 0.25);
+
+  --font-display: 'EB Garamond', 'Garamond', 'Times New Roman', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+
+  --nav-h: 72px;
+  --max-w: 1680px;
+  --gutter: clamp(20px, 4vw, 56px);
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-long: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.45;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; display: block; height: auto; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+
+/* Display type */
+.display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 0.98;
+  letter-spacing: 0.01em;
+  font-style: normal;
+}
+.mega {
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 0.95;
+  letter-spacing: 0.005em;
+  font-size: clamp(56px, 10vw, 180px);
+}
+.big {
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 0.98;
+  letter-spacing: 0.01em;
+  font-size: clamp(44px, 7vw, 120px);
+}
+.mid {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  font-size: clamp(28px, 4vw, 56px);
+}
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-mute);
+}
+.lead {
+  font-family: var(--font-body);
+  font-size: clamp(18px, 1.5vw, 24px);
+  line-height: 1.45;
+  font-weight: 400;
+  color: var(--ink);
+  max-width: 58ch;
+}
+p { max-width: 64ch; }
+p + p { margin-top: 1.15em; }
+
+/* =====================================================
+   NAVIGATION
+   ===================================================== */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  background: var(--cream);
+  border-bottom: 1px solid var(--line);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  transition: background 0.35s var(--ease), border-color 0.35s var(--ease);
+}
+.nav.scrolled {
+  background: rgba(237, 231, 222, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+.nav__inner {
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.nav__brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.nav__brand .since {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--ink-mute);
+  text-transform: uppercase;
+}
+.nav__meta {
+  display: flex;
+  gap: clamp(18px, 2.4vw, 40px);
+  list-style: none;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-mute);
+}
+.nav__meta li { padding: 6px 0; }
+.nav__cta {
+  font-size: 13px;
+  padding: 10px 18px;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  text-transform: lowercase;
+  letter-spacing: 0.02em;
+  transition: all 0.3s var(--ease);
+  background: var(--ink);
+  color: var(--cream);
+}
+.nav__cta:hover { background: transparent; color: var(--ink); }
+@media (max-width: 900px) {
+  .nav__meta { display: none; }
+}
+
+/* =====================================================
+   LAYOUT
+   ===================================================== */
+main { padding-top: var(--nav-h); }
+
+.wrap {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.section { padding: clamp(80px, 10vw, 180px) 0; }
+.section--tight { padding: clamp(60px, 7vw, 120px) 0; }
+.section--hero { padding: clamp(40px, 5vw, 80px) 0 clamp(60px, 7vw, 110px); }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 96px); }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(24px, 3vw, 48px); }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(20px, 2.5vw, 40px); }
+@media (max-width: 900px) {
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; gap: 40px; }
+}
+
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: clamp(40px, 5vw, 80px);
+  flex-wrap: wrap;
+}
+
+/* =====================================================
+   COMPONENTS
+   ===================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 26px;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: lowercase;
+  letter-spacing: 0.01em;
+  transition: all 0.35s var(--ease);
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+.btn:hover { background: var(--ink); color: var(--cream); }
+.btn--solid { background: var(--ink); color: var(--cream); }
+.btn--solid:hover { background: transparent; color: var(--ink); }
+.btn .arrow { transition: transform 0.35s var(--ease); }
+.btn:hover .arrow { transform: translateX(4px); }
+
+.pullquote {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-style: italic;
+  text-transform: none;
+  font-size: clamp(30px, 3.8vw, 56px);
+  line-height: 1.15;
+  letter-spacing: 0;
+  max-width: 22ch;
+  padding: clamp(40px, 6vw, 80px) 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  margin: clamp(40px, 6vw, 80px) 0;
+}
+
+.essay { max-width: 62ch; }
+.essay p { margin-top: 1.2em; }
+.essay p:first-child { margin-top: 0; }
+.essay p:first-child::first-line { font-variant: small-caps; letter-spacing: 0.05em; }
+
+.list-naked { list-style: none; padding: 0; }
+.list-naked li {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 60px 1fr 2fr;
+  gap: 24px;
+  align-items: baseline;
+}
+.list-naked li .num {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--ink-mute);
+  text-transform: uppercase;
+}
+.list-naked li .label {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 1.9vw, 28px);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+.list-naked li .desc {
+  color: var(--ink-mute);
+  font-size: 14px;
+  max-width: 56ch;
+}
+@media (max-width: 720px) {
+  .list-naked li {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 20px 0;
+  }
+}
+
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 6px 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  color: var(--ink-mute);
+}
+
+.marquee {
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 30px 0;
+  white-space: nowrap;
+}
+.marquee__track {
+  display: inline-block;
+  animation: marquee 45s linear infinite;
+}
+.marquee span {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 5vw, 80px);
+  text-transform: none;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 0;
+  padding: 0 30px;
+  color: var(--ink);
+}
+.marquee span::after { content: '·'; margin-left: 60px; color: var(--ink-mute); }
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Pricing tiers — editorial style */
+.tier-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  margin-top: clamp(40px, 5vw, 80px);
+}
+.tier {
+  background: var(--cream);
+  padding: clamp(32px, 4vw, 56px) clamp(28px, 3vw, 40px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  transition: background 0.4s var(--ease);
+}
+.tier:hover { background: var(--cream-2); }
+.tier--featured { background: var(--ink); color: var(--cream); }
+.tier--featured .tier__badge { color: var(--cream); border-color: rgba(237, 231, 222, 0.25); }
+.tier--featured .tier__price-note,
+.tier--featured .tier__desc,
+.tier--featured .tier__features li { color: rgba(237, 231, 222, 0.7); }
+.tier--featured .tier__features li::before { color: var(--cream); }
+.tier--featured:hover { background: var(--ink); }
+.tier--featured .btn { border-color: var(--cream); color: var(--cream); }
+.tier--featured .btn:hover { background: var(--cream); color: var(--ink); }
+
+.tier__badge {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--ink-mute);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+  display: block;
+  width: fit-content;
+  padding-right: 24px;
+}
+.tier__name {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 2.4vw, 36px);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+}
+.tier__price {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 4.5vw, 64px);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+.tier__price-note {
+  font-family: var(--font-body);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-mute);
+  margin-top: 6px;
+}
+.tier__desc {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.35;
+  color: var(--ink-soft);
+  max-width: 32ch;
+}
+.tier__features {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.tier__features li {
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--ink-soft);
+  padding-left: 20px;
+  position: relative;
+}
+.tier__features li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--ink-mute);
+}
+.tier .btn { align-self: flex-start; margin-top: 8px; }
+@media (max-width: 900px) {
+  .tier-grid { grid-template-columns: 1fr; }
+}
+
+/* Timeline — editorial */
+.timeline {
+  display: flex;
+  flex-direction: column;
+}
+.timeline__item {
+  display: grid;
+  grid-template-columns: 120px 1fr 180px;
+  gap: clamp(24px, 3vw, 56px);
+  padding: clamp(32px, 4vw, 56px) 0;
+  border-top: 1px solid var(--line);
+  align-items: baseline;
+}
+.timeline__item:last-child { border-bottom: 1px solid var(--line); }
+.timeline__num {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 5vw, 72px);
+  font-weight: 800;
+  line-height: 0.95;
+  color: var(--ink);
+}
+.timeline__phase {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 2.4vw, 36px);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  margin-bottom: 12px;
+}
+.timeline__desc {
+  font-size: 15px;
+  color: var(--ink-soft);
+  max-width: 56ch;
+}
+.timeline__dur {
+  font-family: var(--font-body);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-mute);
+  text-align: right;
+}
+@media (max-width: 900px) {
+  .timeline__item {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .timeline__dur { text-align: left; }
+  .timeline__num { font-size: 40px; }
+}
+
+/* Why Flareo — text-only editorial */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+.why-item {
+  padding: clamp(36px, 4vw, 56px) clamp(0px, 2vw, 32px);
+  border-bottom: 1px solid var(--line);
+}
+.why-item:nth-child(odd) { border-right: 1px solid var(--line); padding-right: clamp(24px, 3vw, 48px); }
+.why-item:nth-child(even) { padding-left: clamp(24px, 3vw, 48px); }
+.why-item__num {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--ink-mute);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 18px;
+}
+.why-item__title {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 2.6vw, 40px);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 1.05;
+  margin-bottom: 16px;
+}
+.why-item__text {
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.55;
+}
+@media (max-width: 900px) {
+  .why-grid { grid-template-columns: 1fr; }
+  .why-item:nth-child(odd) { border-right: none; padding-right: 0; }
+  .why-item:nth-child(even) { padding-left: 0; }
+}
+
+/* CTA block */
+.cta-block {
+  background: var(--ink);
+  color: var(--cream);
+  padding: clamp(60px, 8vw, 120px) clamp(40px, 5vw, 80px);
+  text-align: center;
+  margin-top: clamp(40px, 5vw, 80px);
+}
+.cta-block .mega { color: var(--cream); }
+.cta-block .lead { color: rgba(237, 231, 222, 0.78); margin: 24px auto 40px; }
+.cta-block .btn {
+  border-color: var(--cream);
+  color: var(--cream);
+}
+.cta-block .btn:hover { background: var(--cream); color: var(--ink); }
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+.footer {
+  border-top: 1px solid var(--line);
+  padding: clamp(60px, 8vw, 120px) 0 40px;
+  background: var(--cream);
+}
+.footer__top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 32px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid var(--line);
+}
+.footer__mega {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 8vw, 140px);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 0.95;
+  letter-spacing: 0.005em;
+  padding: clamp(40px, 6vw, 100px) 0;
+}
+.footer__col h4 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-mute);
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+.footer__col ul { list-style: none; }
+.footer__col li { padding: 6px 0; font-size: 14px; }
+.footer__col a:hover { opacity: 0.55; }
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 30px;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-mute);
+}
+@media (max-width: 900px) { .footer__top { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .footer__top { grid-template-columns: 1fr; gap: 40px; } }
+
+/* Reveal animations */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s var(--ease-long), transform 0.8s var(--ease-long); }
+.reveal.in { opacity: 1; transform: translateY(0); }
+
+/* Print */
+@media print {
+  body { background: white; }
+  .nav, .cta-block .btn, .no-print { display: none !important; }
+  .reveal { opacity: 1; transform: none; }
+  .section { padding: 40px 0; break-inside: avoid; }
+  .tier, .timeline__item { break-inside: avoid; }
+}
+@page { margin: 20mm; }
+
+/* Utilities */
+.hidden { display: none; }
+.center { text-align: center; }
+.mt-0 { margin-top: 0 !important; }
+</style>
 </head>
 <body>
-    <div class="proposal">
-        <!-- Header -->
-        <div class="header">
-            <div class="logo">FLAREO</div>
-            <h1 class="header-title">Proposta Commerciale</h1>
-            <p class="header-subtitle">Trasformazione Digitale per Falegnameria Barco</p>
-            <div class="header-meta">
-                <div>
-                    <label>Cliente</label>
-                    <strong>Falegnameria Barco</strong>
-                </div>
-                <div>
-                    <label>Data</label>
-                    <strong>Aprile 2026</strong>
-                </div>
-            </div>
-        </div>
 
-        <!-- Section 1: Current State -->
-        <div class="section">
-            <h2 class="section-title">Il Vostro Sito Oggi</h2>
-            <div class="section-content">
-                <p>Abbiamo condotto un'analisi completa del vostro sito attuale. Ecco i 12 problemi critici identificati:</p>
-                <div class="issue-list">
-                    <div class="issue-item">
-                        <h4>🔒 Sicurezza HTTP</h4>
-                        <p>Il sito non è protetto da certificato SSL. I visitatori vedono un avviso di sicurezza.</p>
-                    </div>
-                    <div class="issue-item">
-                        <h4>📱 Mobile Non Responsivo</h4>
-                        <p>Il design antiquato non si adatta bene ai dispositivi mobili. Esperienza utente scadente.</p>
-                    </div>
-                    <div class="issue-item">
-                        <h4>🔍 SEO Debole</h4>
-                        <p>Scarsa visibilità su Google. Meta tag assenti, struttura heading confusa.</p>
-                    </div>
-                    <div class="issue-item">
-                        <h4>⚡ Performance Lenta</h4>
-                        <p>Tempi di caricamento superiori a 4 secondi. Immagini non ottimizzate.</p>
-                    </div>
-                    <div class="issue-item">
-                        <h4>✨ Design Datato</h4>
-                        <p>WordPress generico, 5-10 anni indietro. Non riflette il valore del vostro artigianato.</p>
-                    </div>
-                    <div class="issue-item">
-                        <h4>💬 Mancanza di Segnali di Fiducia</h4>
-                        <p>No testimonianze, no certifications, no portfolio visibile. I clienti non sanno perché scegliervi.</p>
-                    </div>
-                    <div class="issue-item">
-                        <h4>📍 Nessuna Ottimizzazione Locale</h4>
-                        <p>Non sfruttate Google My Business, recensioni locali, o SEO regionale.</p>
-                    </div>
-                    <div class="issue-item">
-                        <h4>🎯 CTA Deboli</h4>
-                        <p>Nessun chiaro invito all'azione. Il sito non guida i visitatori al contatto.</p>
-                    </div>
-                    <div class="issue-item">
-                        <h4>📸 Portfolio Nascosto</h4>
-                        <p>I vostri lavori meravigliosi non sono valorizzati. Galleria non professionale.</p>
-                    </div>
-                    <div class="issue-item">
-                        <h4>❌ Accessibilità Scarsa</h4>
-                        <p>Il sito non è accessibile per utenti con disabilità. Risk legale e SEO.</p>
-                    </div>
-                    <div class="issue-item">
-                        <h4>📧 Nessun Newsletter/Lead Capture</h4>
-                        <p>Non costruite una lista di contatti. Opportunità di marketing persa.</p>
-                    </div>
-                    <div class="issue-item">
-                        <h4>🌐 Non Multilingue</h4>
-                        <p>Perdete clienti turistici tedeschi e inglesi. Mercato potenziale ignorato.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!-- ============================= NAVIGATION ============================= -->
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="#">
+      <span class="mark">Flareo</span>
+      <span class="since">× Barco · Aprile 2026</span>
+    </a>
+    <ul class="nav__meta">
+      <li>Proposta Commerciale</li>
+      <li>v1.0</li>
+    </ul>
+    <a class="nav__cta" href="mailto:flareo.agency@gmail.com">rispondi</a>
+  </div>
+</nav>
 
-        <!-- Section 2: Our Proposal -->
-        <div class="section">
-            <h2 class="section-title">La Nostra Proposta</h2>
-            <div class="section-content">
-                <p>Un sito web completamente rinato, che celebra 80 anni di eccellenza artigianale e vi connette ai clienti giusti.</p>
-                <div class="features-grid">
-                    <div class="feature-box">
-                        <div class="feature-icon">🎨</div>
-                        <h4>Design Artisanale</h4>
-                        <p>Palette caldi (arancio, taupe, salvia) che rispecchiano il vostro heritage e la qualità del legno.</p>
-                    </div>
-                    <div class="feature-box">
-                        <div class="feature-icon">📱</div>
-                        <h4>Mobile-First Responsive</h4>
-                        <p>Perfetto su smartphone, tablet, desktop. Nessun visitatore ignorato.</p>
-                    </div>
-                    <div class="feature-box">
-                        <div class="feature-icon">🔍</div>
-                        <h4>SEO Ottimizzato</h4>
-                        <p>Meta tag, heading structure, sitemap, schema markup. Visible su Google.</p>
-                    </div>
-                    <div class="feature-box">
-                        <div class="feature-icon">⚡</div>
-                        <h4>Performance Veloce</h4>
-                        <p>Caricamento under 2 secondi. Immagini ottimizzate, CDN globale.</p>
-                    </div>
-                    <div class="feature-box">
-                        <div class="feature-icon">🔒</div>
-                        <h4>HTTPS Sicuro</h4>
-                        <p>Certificato SSL gratuito. I visitatori sanno che sono al sicuro.</p>
-                    </div>
-                    <div class="feature-box">
-                        <div class="feature-icon">📄</div>
-                        <h4>11 Pagine Professionali</h4>
-                        <p>Home, Chi siamo, Servizi, Serramenti, Porte, Cucine, Mobili, Scale, Restauro, Portfolio, Contatti.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+<main>
 
-        <!-- Section 3: Prototype -->
-        <div class="section">
-            <h2 class="section-title">Il Prototipo</h2>
-            <div class="section-content">
-                <p>Abbiamo già costruito un prototipo completo di 11 pagine, con:</p>
-                <ul style="margin-left: 20px; margin-top: 15px; line-height: 1.8;">
-                    <li><strong>Copywriting professionale in italiano</strong> che raconta la storia dei vostri 80 anni</li>
-                    <li><strong>Palette artisanale</strong>: Merriweather + Inter, arancio/taupe/salvia</li>
-                    <li><strong>Gallery fotografica</strong> dei vostri migliori lavori</li>
-                    <li><strong>Responsive design</strong> che funziona su tutti i dispositivi</li>
-                    <li><strong>SEO base</strong> già implementato</li>
-                </ul>
-                <div class="prototype-cta">
-                    <p><strong>Visualizzate il prototipo e vedete il futuro del vostro sito:</strong></p>
-                    <a href="index.html" class="btn">Accedi al Prototipo</a>
-                </div>
-            </div>
-        </div>
+<!-- ============================= HERO ============================= -->
+<section class="section section--hero">
+  <div class="wrap">
+    <div class="meta-row">
+      <span class="eyebrow">Proposta commerciale · riservata</span>
+      <span class="eyebrow">Flareo Studio · aprile 2026</span>
+      <span class="eyebrow">Validità · 30 giorni</span>
+    </div>
+    <h1 class="mega">Un sito<br>all'altezza<br>di 80 anni<br>di mestiere.</h1>
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; gap:32px; flex-wrap:wrap; margin-top: clamp(40px, 5vw, 72px);">
+      <p class="lead">Proposta di redesign e sviluppo del nuovo sito web per <strong>Falegnameria Barco</strong>. Un progetto editoriale che racconta tre generazioni di marangon, valorizza il portfolio e porta clienti qualificati in laboratorio.</p>
+      <a class="btn btn--solid" href="#proposta">leggi la proposta <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
 
-        <!-- Section 4: Servizi e Pricing -->
-        <div class="section">
-            <h2 class="section-title">Servizi e Pricing</h2>
-            <div class="section-content">
-                <p style="margin-bottom: 30px;">Tre livelli di servizio per scalare con la vostra crescita.</p>
-                <div class="pricing-grid">
-                    <!-- Base Tier -->
-                    <div class="pricing-tier">
-                        <span class="tier-badge badge-base">Base</span>
-                        <div class="tier-name">Incluso nel Progetto</div>
-                        <div class="tier-price"><span class="currency">€</span>3.500 – 5.500</div>
-                        <p class="tier-description">Lancio completo del sito rinato</p>
-                        <ul class="tier-features">
-                            <li>Design responsivo multi-pagina (11 pagine)</li>
-                            <li>Copywriting professionale italiano</li>
-                            <li>SEO base (meta tag, heading, sitemap)</li>
-                            <li>Certificato SSL (HTTPS)</li>
-                            <li>Deploy e messa online</li>
-                            <li>30 giorni supporto post-lancio</li>
-                            <li>Formazione base per aggiornamenti</li>
-                        </ul>
-                        <button class="tier-cta">Seleziona</button>
-                    </div>
+<!-- ============================= MARQUEE ============================= -->
+<section style="margin-top: clamp(20px, 3vw, 40px);">
+  <div class="marquee">
+    <div class="marquee__track">
+      <span>Editoriale</span><span>Tre generazioni</span><span>Su misura</span><span>Dal 1940</span><span>Artigianale</span><span>Editoriale</span><span>Tre generazioni</span><span>Su misura</span><span>Dal 1940</span><span>Artigianale</span>
+    </div>
+  </div>
+</section>
 
-                    <!-- Premium Tier -->
-                    <div class="pricing-tier featured">
-                        <span class="tier-badge badge-premium">Premium</span>
-                        <div class="tier-name">Servizi Aggiuntivi</div>
-                        <div class="tier-price"><span class="currency">€</span>1.500+</div>
-                        <p class="tier-description">Potenziamento gestione e reach</p>
-                        <ul class="tier-features">
-                            <li>Integrazione CMS (WordPress/Strapi)</li>
-                            <li>Galleria fotografica con lightbox</li>
-                            <li>Multilingua (inglese, tedesco)</li>
-                            <li>Google Analytics + Search Console</li>
-                            <li>Ottimizzazione performance avanzata</li>
-                            <li>SEO locale (Google My Business)</li>
-                            <li>3 mesi supporto esteso</li>
-                        </ul>
-                        <button class="tier-cta">Seleziona</button>
-                    </div>
-
-                    <!-- Enterprise Tier -->
-                    <div class="pricing-tier">
-                        <span class="tier-badge badge-enterprise">Enterprise</span>
-                        <div class="tier-name">Potenziamento Commerciale</div>
-                        <div class="tier-price">Su preventivo</div>
-                        <p class="tier-description">E-commerce e automazione completa</p>
-                        <ul class="tier-features">
-                            <li>E-commerce per accessori e mobili</li>
-                            <li>Configuratore cucine interattivo</li>
-                            <li>Booking system per visite laboratorio</li>
-                            <li>SEO avanzato + content marketing</li>
-                            <li>Social media management</li>
-                            <li>Integrazione CRM e lead nurturing</li>
-                            <li>SLA supporto dedicato 24/7</li>
-                        </ul>
-                        <button class="tier-cta">Richiedi Preventivo</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section 5: Timeline -->
-        <div class="section">
-            <h2 class="section-title">Timeline del Progetto</h2>
-            <div class="section-content">
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <h4>Fase 1: Kick-off e Revisione</h4>
-                        <p>Allineamento su obiettivi, approvazione prototipo, raccolta contenuti finali.</p>
-                        <div class="timeline-duration">1 settimana</div>
-                    </div>
-                    <div class="timeline-item">
-                        <h4>Fase 2: Design e Contenuti</h4>
-                        <p>Affinamento design, copywriting definitivo, optimizzazione immagini.</p>
-                        <div class="timeline-duration">2 settimane</div>
-                    </div>
-                    <div class="timeline-item">
-                        <h4>Fase 3: Sviluppo</h4>
-                        <p>Build del sito produzione, integrazione CMS, setup analytics.</p>
-                        <div class="timeline-duration">2–3 settimane</div>
-                    </div>
-                    <div class="timeline-item">
-                        <h4>Fase 4: Test e Revisioni</h4>
-                        <p>QA completo, test multi-browser, ottimizzazione performance, revisioni cliente.</p>
-                        <div class="timeline-duration">1 settimana</div>
-                    </div>
-                    <div class="timeline-item">
-                        <h4>Fase 5: Lancio e Formazione</h4>
-                        <p>Deploy a produzione, monitoraggio live, formazione team su gestione contenuti.</p>
-                        <div class="timeline-duration">1 settimana</div>
-                    </div>
-                </div>
-                <p style="margin-top: 30px; font-size: 16px; font-weight: 600; color: #E8430A;"><strong>Durata totale: 7–9 settimane</strong></p>
-            </div>
-        </div>
-
-        <!-- Section 6: Why Flareo -->
-        <div class="section">
-            <h2 class="section-title">Perché Flareo</h2>
-            <div class="section-content">
-                <div class="why-flareo">
-                    <div class="why-item">
-                        <div class="why-icon">🤖</div>
-                        <div class="why-content">
-                            <h4>AI-Powered Execution</h4>
-                            <p>Usando AI per accelerare design, copywriting, e testing. Velocità senza compromessi sulla qualità.</p>
-                        </div>
-                    </div>
-                    <div class="why-item">
-                        <div class="why-icon">🎯</div>
-                        <div class="why-content">
-                            <h4>Proactive Approach</h4>
-                            <p>Vi presentiamo il prototipo PRIMA della firma. Vedete quello che pagherete, non promesse vuote.</p>
-                        </div>
-                    </div>
-                    <div class="why-item">
-                        <div class="why-icon">🏗️</div>
-                        <div class="why-content">
-                            <h4>Full-Service</h4>
-                            <p>Design + Sviluppo + SEO + Deployment. Un team, una visione, zero handoff.</p>
-                        </div>
-                    </div>
-                    <div class="why-item">
-                        <div class="why-icon">🇮🇹</div>
-                        <div class="why-content">
-                            <h4>Team Italiano, Qualità Italiana</h4>
-                            <p>Cappiamo il vostro mercato, la vostra lingua, la vostra cultura artigianale.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer -->
-        <div class="footer">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <label>Email</label>
-                    <a href="mailto:flareo.agency@gmail.com">flareo.agency@gmail.com</a>
-                </div>
-                <div class="footer-section">
-                    <label>Website</label>
-                    <a href="https://flareo.studio" target="_blank">flareo.studio</a>
-                </div>
-            </div>
-            <div class="footer-divider"></div>
-            <div class="footer-note">
-                <p>Questa proposta è valida per 30 giorni dalla data indicata.</p>
-                <p style="margin-top: 8px;">Flareo Studio — AI-Powered Design & Development</p>
-            </div>
-        </div>
+<!-- ============================= PREMESSA ============================= -->
+<section class="section">
+  <div class="wrap">
+    <div class="grid-2">
+      <div>
+        <span class="eyebrow reveal">— Premessa</span>
+        <h2 class="big reveal" style="margin-top: 18px;">Il vostro lavoro merita un sito che lo racconti.</h2>
+      </div>
+      <div class="essay reveal">
+        <p>Falegnameria Barco è una realtà rara: tre generazioni di marangon a San Pietro in Gù, 80+ anni di mestiere ininterrotto, un portfolio di serramenti, porte, cucine e mobili che parla da solo.</p>
+        <p>Il sito attuale, però, non è all'altezza. È datato, lento, non si adatta ai telefoni, e soprattutto non racconta nulla della storia, del laboratorio, della qualità del vostro legno. Chi vi cerca su Google trova una vetrina vecchia di dieci anni.</p>
+        <p>Questa proposta nasce da un prototipo già costruito — non promesse, ma pagine reali che potete navigare, criticare, approvare. Poi, se ci date fiducia, lo portiamo in produzione.</p>
+      </div>
     </div>
 
-    <script>
-        // Print functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add print button for browsers
-            if (window.print) {
-                const printBtn = document.createElement('button');
-                printBtn.className = 'btn';
-                printBtn.textContent = 'Stampa Proposta';
-                printBtn.style.position = 'fixed';
-                printBtn.style.bottom = '30px';
-                printBtn.style.right = '30px';
-                printBtn.style.zIndex = '1000';
-                printBtn.style.boxShadow = '0 4px 15px rgba(0,0,0,0.2)';
-                printBtn.onclick = () => window.print();
-                document.body.appendChild(printBtn);
-            }
+    <div class="pullquote reveal">«Il legno non si tradisce — e nemmeno il web, se lo tratti con rispetto.»</div>
+  </div>
+</section>
 
-            // CTA buttons
-            const ctaButtons = document.querySelectorAll('.tier-cta, .btn');
-            ctaButtons.forEach(btn => {
-                if (btn.textContent === 'Seleziona' || btn.textContent === 'Richiedi Preventivo') {
-                    btn.onclick = (e) => {
-                        e.preventDefault();
-                        alert('Contattaci a flareo.agency@gmail.com per iniziare!');
-                    };
-                }
-            });
-        });
-    </script>
+<!-- ============================= IL SITO OGGI ============================= -->
+<section class="section--tight">
+  <div class="wrap">
+    <div class="meta-row">
+      <span class="eyebrow">01 · Analisi</span>
+      <span class="eyebrow">Stato attuale</span>
+      <span class="eyebrow">12 criticità</span>
+    </div>
+    <h2 class="big reveal" style="margin-bottom: clamp(40px, 5vw, 80px);">Il sito oggi.</h2>
+
+    <ul class="list-naked">
+      <li>
+        <span class="num">01 —</span>
+        <span class="label">Sicurezza HTTP</span>
+        <span class="desc">Il sito non ha certificato SSL. I visitatori vedono un avviso di sicurezza nel browser e Google penalizza il ranking.</span>
+      </li>
+      <li>
+        <span class="num">02 —</span>
+        <span class="label">Mobile non responsivo</span>
+        <span class="desc">Il design non si adatta a smartphone o tablet. Oltre il 60% dei visitatori scappa in pochi secondi.</span>
+      </li>
+      <li>
+        <span class="num">03 —</span>
+        <span class="label">SEO debole</span>
+        <span class="desc">Meta tag assenti, heading confusi, nessuno schema markup. Scarsa visibilità sulle ricerche locali.</span>
+      </li>
+      <li>
+        <span class="num">04 —</span>
+        <span class="label">Performance lenta</span>
+        <span class="desc">Tempi di caricamento oltre 4 secondi. Immagini non compresse, nessuna CDN, codice datato.</span>
+      </li>
+      <li>
+        <span class="num">05 —</span>
+        <span class="label">Design datato</span>
+        <span class="desc">Template WordPress generico, fermo a dieci anni fa. Non riflette il valore reale del vostro artigianato.</span>
+      </li>
+      <li>
+        <span class="num">06 —</span>
+        <span class="label">Mancanza di fiducia</span>
+        <span class="desc">Nessuna testimonianza, nessuna certificazione in evidenza, nessun racconto del laboratorio. Niente che convinca.</span>
+      </li>
+      <li>
+        <span class="num">07 —</span>
+        <span class="label">Zero SEO locale</span>
+        <span class="desc">Google My Business non integrato, nessuna ottimizzazione per "falegname Padova" e ricerche geografiche.</span>
+      </li>
+      <li>
+        <span class="num">08 —</span>
+        <span class="label">CTA assenti</span>
+        <span class="desc">Nessun invito chiaro al contatto. I visitatori arrivano, guardano, e se ne vanno senza chiamare.</span>
+      </li>
+      <li>
+        <span class="num">09 —</span>
+        <span class="label">Portfolio nascosto</span>
+        <span class="desc">I vostri lavori più belli sono sepolti in una gallery non professionale. Il valore visivo è invisibile.</span>
+      </li>
+      <li>
+        <span class="num">10 —</span>
+        <span class="label">Accessibilità scarsa</span>
+        <span class="desc">Il sito non rispetta WCAG. Rischio legale, penalizzazione SEO, esclusione di utenti con disabilità.</span>
+      </li>
+      <li>
+        <span class="num">11 —</span>
+        <span class="label">Nessun lead capture</span>
+        <span class="desc">Nessuna newsletter, nessun form di preventivo strutturato. Opportunità di contatto perse.</span>
+      </li>
+      <li>
+        <span class="num">12 —</span>
+        <span class="label">Monolingua</span>
+        <span class="desc">Solo italiano. Nessuna versione per clienti tedeschi o austriaci del mercato veneto-dolomitico.</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================= LA PROPOSTA ============================= -->
+<section class="section" id="proposta">
+  <div class="wrap">
+    <div class="meta-row">
+      <span class="eyebrow">02 · Proposta</span>
+      <span class="eyebrow">Il nuovo sito</span>
+      <span class="eyebrow">11 pagine · editoriale</span>
+    </div>
+
+    <div class="grid-2">
+      <div>
+        <h2 class="big reveal">Un sito editoriale che respira.</h2>
+      </div>
+      <div class="essay reveal">
+        <p>Abbiamo ripensato il sito come una rivista d'arte: tipografia serif classica (EB Garamond), tavolozza calda cream + inchiostro, spazi ampi, fotografie in primo piano. Ogni pagina racconta un capitolo — la storia, il laboratorio, le sette categorie di opere, i materiali, i contatti.</p>
+        <p>Non è un template. È un sistema di design costruito su misura, con componenti riutilizzabili, tipografia responsive e dettagli che si notano solo quando ci sono.</p>
+      </div>
+    </div>
+
+    <ul class="list-naked" style="margin-top: clamp(60px, 7vw, 100px);">
+      <li>
+        <span class="num">→</span>
+        <span class="label">Design editoriale</span>
+        <span class="desc">EB Garamond + Inter, tavolozza cream + ink, layout a griglia con ampi respiri. Un'estetica che parla la lingua dell'artigianato premium italiano.</span>
+      </li>
+      <li>
+        <span class="num">→</span>
+        <span class="label">Mobile-first responsive</span>
+        <span class="desc">Perfetto su smartphone, tablet e desktop. Tipografia fluida con clamp(), immagini ottimizzate, touch-friendly.</span>
+      </li>
+      <li>
+        <span class="num">→</span>
+        <span class="label">SEO tecnico completo</span>
+        <span class="desc">Meta tag, schema markup LocalBusiness, sitemap XML, open graph, heading strutturati. Pronti a scalare Google.</span>
+      </li>
+      <li>
+        <span class="num">→</span>
+        <span class="label">Performance sotto 2 secondi</span>
+        <span class="desc">Immagini in WebP, CSS minimale, zero framework pesanti, CDN globale. Core Web Vitals in verde.</span>
+      </li>
+      <li>
+        <span class="num">→</span>
+        <span class="label">HTTPS e sicurezza</span>
+        <span class="desc">Certificato SSL incluso, aggiornamenti automatici, protezione da attacchi base. Il badge verde nel browser.</span>
+      </li>
+      <li>
+        <span class="num">→</span>
+        <span class="label">11 pagine professionali</span>
+        <span class="desc">Home, Atelier, Serramenti, Porte, Cucine, Mobili, Scale, Giardino, Restauro, Materiali, Contatti. Ogni categoria ha la sua storia.</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================= IL PROTOTIPO ============================= -->
+<section class="section--tight" style="background: var(--cream-2);">
+  <div class="wrap">
+    <div class="grid-2" style="align-items: center;">
+      <div>
+        <span class="eyebrow">03 · Prototipo</span>
+        <h2 class="mid reveal" style="margin-top: 18px;">Navigatelo prima di firmare.</h2>
+        <p class="lead reveal" style="margin-top: 24px;">Invece di promesse, abbiamo costruito un prototipo completo di 11 pagine. Potete cliccare, leggere, criticare. Se vi convince, lo portiamo in produzione. Se non vi convince, lo sistemiamo insieme.</p>
+      </div>
+      <div class="reveal" style="text-align: right;">
+        <a class="btn btn--solid" href="index.html" target="_blank">apri il prototipo <span class="arrow">→</span></a>
+        <div style="margin-top: 16px; font-family: var(--font-body); font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--ink-mute);">
+          11 pagine · responsive · interattivo
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= PRICING ============================= -->
+<section class="section">
+  <div class="wrap">
+    <div class="meta-row">
+      <span class="eyebrow">04 · Investimento</span>
+      <span class="eyebrow">Tre livelli</span>
+      <span class="eyebrow">IVA esclusa</span>
+    </div>
+    <h2 class="big reveal">Servizi e investimento.</h2>
+    <p class="lead reveal" style="margin-top: 24px;">Tre livelli pensati per scalare con la vostra crescita. Il <strong>Base</strong> è tutto quello che serve per lanciare il nuovo sito. Il <strong>Premium</strong> aggiunge CMS, multilingua e SEO locale. L'<strong>Enterprise</strong> è per quando vorrete il configuratore cucine, l'e-commerce, il booking.</p>
+
+    <div class="tier-grid">
+
+      <!-- BASE -->
+      <div class="tier">
+        <span class="tier__badge">01 · Base</span>
+        <div>
+          <div class="tier__name">Nuovo sito<br>editoriale</div>
+          <div class="tier__desc">Tutto quello che serve per lanciare.</div>
+        </div>
+        <div>
+          <div class="tier__price">€3,5–5,5k</div>
+          <div class="tier__price-note">Una tantum · progetto chiavi in mano</div>
+        </div>
+        <ul class="tier__features">
+          <li>Design responsivo · 11 pagine</li>
+          <li>Copywriting professionale italiano</li>
+          <li>SEO base (meta, heading, sitemap)</li>
+          <li>Certificato SSL (HTTPS)</li>
+          <li>Deploy e messa online</li>
+          <li>30 giorni di supporto post-lancio</li>
+          <li>Formazione base per aggiornamenti</li>
+        </ul>
+        <a class="btn" href="mailto:flareo.agency@gmail.com?subject=Barco · Base">scegli base <span class="arrow">→</span></a>
+      </div>
+
+      <!-- PREMIUM -->
+      <div class="tier tier--featured">
+        <span class="tier__badge">02 · Premium · consigliato</span>
+        <div>
+          <div class="tier__name">Gestione<br>e portata</div>
+          <div class="tier__desc">Quando volete scalare e gestire da soli.</div>
+        </div>
+        <div>
+          <div class="tier__price">+€1,5k</div>
+          <div class="tier__price-note">In aggiunta al Base</div>
+        </div>
+        <ul class="tier__features">
+          <li>Integrazione CMS (WordPress o Strapi)</li>
+          <li>Galleria fotografica con lightbox</li>
+          <li>Versione inglese e tedesca</li>
+          <li>Google Analytics + Search Console</li>
+          <li>Ottimizzazione performance avanzata</li>
+          <li>SEO locale (Google My Business)</li>
+          <li>3 mesi di supporto esteso</li>
+        </ul>
+        <a class="btn" href="mailto:flareo.agency@gmail.com?subject=Barco · Premium">scegli premium <span class="arrow">→</span></a>
+      </div>
+
+      <!-- ENTERPRISE -->
+      <div class="tier">
+        <span class="tier__badge">03 · Enterprise</span>
+        <div>
+          <div class="tier__name">E-commerce<br>e automazione</div>
+          <div class="tier__desc">Per quando il sito diventa un motore commerciale.</div>
+        </div>
+        <div>
+          <div class="tier__price">Su misura</div>
+          <div class="tier__price-note">Preventivo dedicato</div>
+        </div>
+        <ul class="tier__features">
+          <li>E-commerce per accessori e mobili</li>
+          <li>Configuratore cucine interattivo</li>
+          <li>Booking per visite in laboratorio</li>
+          <li>SEO avanzato + content marketing</li>
+          <li>Gestione social media</li>
+          <li>Integrazione CRM e lead nurturing</li>
+          <li>SLA di supporto 24/7</li>
+        </ul>
+        <a class="btn" href="mailto:flareo.agency@gmail.com?subject=Barco · Enterprise">richiedi preventivo <span class="arrow">→</span></a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================= TIMELINE ============================= -->
+<section class="section">
+  <div class="wrap">
+    <div class="meta-row">
+      <span class="eyebrow">05 · Timeline</span>
+      <span class="eyebrow">Dalla firma al lancio</span>
+      <span class="eyebrow">7–9 settimane</span>
+    </div>
+    <h2 class="big reveal">Come lavoriamo.</h2>
+
+    <div class="timeline" style="margin-top: clamp(40px, 5vw, 80px);">
+      <div class="timeline__item">
+        <div class="timeline__num">01</div>
+        <div>
+          <div class="timeline__phase">Kick-off e revisione</div>
+          <div class="timeline__desc">Allineamento su obiettivi, approvazione del prototipo, raccolta contenuti finali (fotografie, testi storici, certificazioni).</div>
+        </div>
+        <div class="timeline__dur">1 settimana</div>
+      </div>
+
+      <div class="timeline__item">
+        <div class="timeline__num">02</div>
+        <div>
+          <div class="timeline__phase">Design e contenuti</div>
+          <div class="timeline__desc">Affinamento del design finale, copywriting definitivo in italiano, ottimizzazione e selezione delle immagini del portfolio.</div>
+        </div>
+        <div class="timeline__dur">2 settimane</div>
+      </div>
+
+      <div class="timeline__item">
+        <div class="timeline__num">03</div>
+        <div>
+          <div class="timeline__phase">Sviluppo</div>
+          <div class="timeline__desc">Build del sito di produzione, integrazione del CMS (se Premium), setup analytics, test multi-browser e multi-dispositivo.</div>
+        </div>
+        <div class="timeline__dur">2–3 settimane</div>
+      </div>
+
+      <div class="timeline__item">
+        <div class="timeline__num">04</div>
+        <div>
+          <div class="timeline__phase">Test e revisioni</div>
+          <div class="timeline__desc">QA completo, ottimizzazione performance, ciclo di revisione cliente con round di feedback strutturati.</div>
+        </div>
+        <div class="timeline__dur">1 settimana</div>
+      </div>
+
+      <div class="timeline__item">
+        <div class="timeline__num">05</div>
+        <div>
+          <div class="timeline__phase">Lancio e formazione</div>
+          <div class="timeline__desc">Deploy in produzione, monitoraggio live nelle prime 72 ore, formazione del team sulla gestione dei contenuti.</div>
+        </div>
+        <div class="timeline__dur">1 settimana</div>
+      </div>
+    </div>
+
+    <div class="pullquote reveal" style="margin-top: clamp(60px, 7vw, 100px);">«Sette–nove settimane per un sito che durerà dieci anni.»</div>
+  </div>
+</section>
+
+<!-- ============================= PERCHÉ FLAREO ============================= -->
+<section class="section">
+  <div class="wrap">
+    <div class="meta-row">
+      <span class="eyebrow">06 · Chi siamo</span>
+      <span class="eyebrow">Flareo Studio</span>
+      <span class="eyebrow">Quattro ragioni</span>
+    </div>
+    <h2 class="big reveal" style="margin-bottom: clamp(40px, 5vw, 80px);">Perché Flareo.</h2>
+
+    <div class="why-grid">
+      <div class="why-item reveal">
+        <span class="why-item__num">01</span>
+        <div class="why-item__title">Esecuzione<br>AI-powered</div>
+        <div class="why-item__text">Usiamo l'intelligenza artificiale per accelerare design, copywriting e testing. Velocità da agenzia moderna, senza compromessi sulla qualità. Tempi da startup, risultati da studio d'autore.</div>
+      </div>
+      <div class="why-item reveal">
+        <span class="why-item__num">02</span>
+        <div class="why-item__title">Prototipo<br>prima della firma</div>
+        <div class="why-item__text">Vi abbiamo già costruito 11 pagine reali. Navigatele, criticatele, confrontatele con i vostri concorrenti. Poi decidete. Niente promesse vaghe, solo pagine che esistono già.</div>
+      </div>
+      <div class="why-item reveal">
+        <span class="why-item__num">03</span>
+        <div class="why-item__title">Un solo<br>interlocutore</div>
+        <div class="why-item__text">Design, sviluppo, SEO, deploy, copywriting. Un team, una visione, zero handoff confusi. Parlate con chi effettivamente costruisce il sito, non con un project manager.</div>
+      </div>
+      <div class="why-item reveal">
+        <span class="why-item__num">04</span>
+        <div class="why-item__title">Italiani,<br>come voi</div>
+        <div class="why-item__text">Parliamo la vostra lingua, capiamo il mercato veneto, conosciamo la differenza tra marangon e falegname. Nessun brief perso in traduzione, nessun fuso orario tra noi e voi.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= CTA FINALE ============================= -->
+<section class="section--tight">
+  <div class="wrap">
+    <div class="cta-block">
+      <h2 class="mega">Parliamone.</h2>
+      <p class="lead">Una proposta non chiude un progetto. Una conversazione sì. Raccontateci la vostra visione per il prossimo decennio di Barco, e costruiamola insieme.</p>
+      <a class="btn" href="mailto:flareo.agency@gmail.com?subject=Proposta Barco · Rispondo">scrivici oggi <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================= FOOTER ============================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__mega reveal">Flareo<br>× Barco.</div>
+
+    <div class="footer__top">
+      <div class="footer__col">
+        <h4>— Flareo Studio</h4>
+        <p style="font-size: 14px; color: var(--ink-soft); max-width: 36ch;">Studio di design e sviluppo AI-powered. Costruiamo siti editoriali per artigiani, atelier e aziende italiane che hanno una storia da raccontare.</p>
+      </div>
+      <div class="footer__col">
+        <h4>— Contatti</h4>
+        <ul>
+          <li><a href="mailto:flareo.agency@gmail.com">flareo.agency@gmail.com</a></li>
+          <li><a href="https://flareo.studio" target="_blank">flareo.studio</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>— Proposta</h4>
+        <ul>
+          <li>Riferimento · Barco-2026-01</li>
+          <li>Data · Aprile 2026</li>
+          <li>Validità · 30 giorni</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© 2026 Flareo Studio · Proposta riservata</span>
+      <span>Falegnameria Barco · Aprile 2026</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Nav scroll effect
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 20) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+});
+
+// Reveal on scroll
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
 </body>
 </html>
