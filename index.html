@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Falegnameria Barco — Artigiani del legno dal 1940 | San Pietro in Gù</title>
-<meta name="description" content="Falegnameria Barco: serramenti, porte, cucine, mobili su misura. Artigiani del legno a San Pietro in Gù (Padova) dal 1940. Tre generazioni, 80+ anni di mestiere.">
+<title>Falegnameria Barco â Artigiani del legno dal 1940 | San Pietro in GÃ¹</title>
+<meta name="description" content="Falegnameria Barco: serramenti, porte, cucine, mobili su misura. Artigiani del legno a San Pietro in GÃ¹ (Padova) dal 1940. Tre generazioni, 80+ anni di mestiere.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* =========================================================
-   FALEGNAMERIA BARCO — Editorial Italian Restyle
-   Cream + Ink · EB Garamond (display) + Inter (body)
-   Garamond: serif umanista classico — carattere caldo, leggibile
+   FALEGNAMERIA BARCO â Editorial Italian Restyle
+   Cream + Ink Â· EB Garamond (display) + Inter (body)
+   Garamond: serif umanista classico â carattere caldo, leggibile
    ========================================================= */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -53,8 +53,8 @@ img { max-width: 100%; display: block; height: auto; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
 
-/* Display type — EB Garamond (serif umanista classico)
-   Tracking positivo per uppercase (Garamond è più delicato, ha bisogno di respiro)
+/* Display type â EB Garamond (serif umanista classico)
+   Tracking positivo per uppercase (Garamond Ã¨ piÃ¹ delicato, ha bisogno di respiro)
    Weight 800 per i mega size per dare presenza, 700 per big/mid */
 .display {
   font-family: var(--font-display);
@@ -306,7 +306,7 @@ main { padding-top: var(--nav-h); }
   filter: blur(3px);
 }
 
-/* HERO SLIDER (portrait carousel) — blur-bridge crossfade + Ken Burns */
+/* HERO SLIDER (portrait carousel) â blur-bridge crossfade + Ken Burns */
 .hero-slider { position: relative; }
 .hero-slider__stage { position: absolute; inset: 0; overflow: hidden; }
 .hero-slider__img {
@@ -318,20 +318,15 @@ main { padding-top: var(--nav-h); }
   opacity: 0;
   transform: scale(1.06);
   filter: saturate(0.82) contrast(1.02) blur(10px);
-  will-change: opacity, transform, filter;
+  will-change: opacity, filter;
   transition:
-    opacity 1200ms var(--ease),
-    filter 900ms var(--ease);
+    opacity 1400ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 1100ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 .hero-slider__img.is-active {
   opacity: 1;
   filter: saturate(0.9) contrast(1.02) blur(0);
-  animation: heroEnter 8000ms cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-@keyframes heroEnter {
-  0%   { transform: scale(1.06); }
-  18%  { transform: scale(1); }
-  100% { transform: scale(1.045); }
+  z-index: 1;
 }
 .hero-slider:hover .hero-slider__img.is-active {
   filter: saturate(1) contrast(1.02) blur(0);
@@ -608,7 +603,7 @@ main { padding-top: var(--nav-h); }
 .list-naked li span:last-child { color: var(--ink-mute); font-size: 14px; max-width: 42ch; text-align: right; }
 @media (max-width: 640px) { .list-naked li { flex-direction: column; gap: 6px; } .list-naked li span:last-child { text-align: left; } }
 
-/* Wood essence variant — circular closeup beside each row */
+/* Wood essence variant â circular closeup beside each row */
 .list-naked--wood li { align-items: center; }
 .list-naked--wood .essence-circle {
   width: 72px;
@@ -671,7 +666,7 @@ main { padding-top: var(--nav-h); }
   padding: 0 30px;
   color: var(--ink);
 }
-.marquee span::after { content: '·'; margin-left: 60px; color: var(--ink-mute); }
+.marquee span::after { content: 'Â·'; margin-left: 60px; color: var(--ink-mute); }
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -775,7 +770,7 @@ main { padding-top: var(--nav-h); }
   <div class="nav__inner">
     <a class="nav__brand" onclick="go('page-home')">
       <span class="mark">Barco</span>
-      <span class="since">®40 · Padova</span>
+      <span class="since">Â®40 Â· Padova</span>
     </a>
     <ul class="nav__links" id="navLinks">
       <li><a class="nav-link" data-nav="page-home" onclick="go('page-home')">home</a></li>
@@ -802,33 +797,33 @@ main { padding-top: var(--nav-h); }
 
 <main id="main">
 
-<!-- ============================= PAGE · HOME ============================= -->
+<!-- ============================= PAGE Â· HOME ============================= -->
 <div class="page active" data-page="page-home">
 
   <!-- HERO -->
   <section class="section section--hero section--hero-home">
     <div class="wrap">
       <div class="meta-row">
-        <span class="eyebrow">Falegnameria Artigiana · dal 1940</span>
-        <span class="eyebrow">San Pietro in Gù · Padova</span>
-        <span class="eyebrow">FSC · CE · PosaClima</span>
+        <span class="eyebrow">Falegnameria Artigiana Â· dal 1940</span>
+        <span class="eyebrow">San Pietro in GÃ¹ Â· Padova</span>
+        <span class="eyebrow">FSC Â· CE Â· PosaClima</span>
       </div>
       <div class="hero-grid">
         <div class="hero-text">
           <h1 class="mega">Artigiani<br>del legno<br>dal 1940.</h1>
           <div style="display:flex; justify-content:space-between; align-items:flex-end; gap:32px; flex-wrap:wrap; margin-top: clamp(32px, 4vw, 56px);">
-            <p class="lead">Serramenti, porte, cucine e mobili su misura. Tre generazioni di marangon nel cuore del Veneto, dove il primo colpo di pialla lo tirò Toni Barco tra le due guerre.</p>
-            <a class="btn btn--solid" onclick="go('page-chi-siamo')">scopri l'atelier <span class="arrow">→</span></a>
+            <p class="lead">Serramenti, porte, cucine e mobili su misura. Tre generazioni di marangon nel cuore del Veneto, dove il primo colpo di pialla lo tirÃ² Toni Barco tra le due guerre.</p>
+            <a class="btn btn--solid" onclick="go('page-chi-siamo')">scopri l'atelier <span class="arrow">â</span></a>
           </div>
         </div>
         <figure class="hero-portrait hero-slider reveal" id="heroSlider" aria-label="Ritratti della squadra Barco">
           <div class="hero-slider__stage">
-            <img class="hero-slider__img is-active" src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/10/falegnameria-artigiana-barco.jpg" alt="Luca Barco — 3ª generazione, marangon">
-            <img class="hero-slider__img" src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/05/falegnameria-barco-flavio-600x600.jpg" alt="Flavio Barco — legale rappresentante, responsabile cantiere">
-            <img class="hero-slider__img" src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/05/falegname-nicola-barco-600x600.jpg" alt="Nicola Barco — controllo qualità, produzione">
-            <img class="hero-slider__img" src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/05/verniciatura-mobili-barco-federico-600x600.jpg" alt="Federico Barco — responsabile verniciatura, produzione">
+            <img class="hero-slider__img is-active" src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/10/falegnameria-artigiana-barco.jpg" alt="Luca Barco â 3Âª generazione, marangon">
+            <img class="hero-slider__img" src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/05/falegnameria-barco-flavio-600x600.jpg" alt="Flavio Barco â legale rappresentante, responsabile cantiere">
+            <img class="hero-slider__img" src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/05/falegname-nicola-barco-600x600.jpg" alt="Nicola Barco â controllo qualitÃ , produzione">
+            <img class="hero-slider__img" src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/05/verniciatura-mobili-barco-federico-600x600.jpg" alt="Federico Barco â responsabile verniciatura, produzione">
           </div>
-          <figcaption id="heroSliderCaption">Luca Barco<br>3ª generazione · marangon</figcaption>
+          <figcaption id="heroSliderCaption">Luca Barco<br>3Âª generazione Â· marangon</figcaption>
           <div class="hero-slider__dots" role="tablist" aria-label="Seleziona ritratto">
             <button class="hero-slider__dot is-active" type="button" data-idx="0" aria-label="Luca Barco"></button>
             <button class="hero-slider__dot" type="button" data-idx="1" aria-label="Flavio Barco"></button>
@@ -844,7 +839,7 @@ main { padding-top: var(--nav-h); }
   <section style="margin-top: clamp(16px, 2vw, 24px);">
     <div class="wrap">
       <div style="aspect-ratio: 21/9; overflow:hidden; background: var(--cream-2);" class="reveal">
-        <img src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/10/piallatura-legno-falegname.jpg" alt="Piallatura del legno — artigianato Barco" style="width:100%; height:100%; object-fit:cover; filter: saturate(0.9);">
+        <img src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/10/piallatura-legno-falegname.jpg" alt="Piallatura del legno â artigianato Barco" style="width:100%; height:100%; object-fit:cover; filter: saturate(0.9);">
       </div>
     </div>
   </section>
@@ -854,66 +849,66 @@ main { padding-top: var(--nav-h); }
     <div class="wrap">
       <div class="grid-2">
         <div>
-          <span class="eyebrow reveal">— Manifesto</span>
-          <h2 class="big reveal" style="margin-top: 18px;">Qualità, tradizione, artigianalità senza compromessi.</h2>
+          <span class="eyebrow reveal">â Manifesto</span>
+          <h2 class="big reveal" style="margin-top: 18px;">QualitÃ , tradizione, artigianalitÃ  senza compromessi.</h2>
         </div>
         <div class="essay reveal">
           <p>Dal 1940, Falegnameria Barco trasforma il legno in oggetti di funzione e bellezza. Tre generazioni di maestri artigiani hanno perfezionato ogni dettaglio, ogni giunto, ogni finitura.</p>
-          <p>Non crediamo nei compromessi: ogni pezzo che esce dal nostro laboratorio porta con sé l'esperienza di oltre 80 anni e l'impegno di chi ama veramente il proprio mestiere.</p>
-          <p>Lavoriamo solo con legni certificati FSC e CE, utilizziamo sistemi di posa innovativi come PosaClima, e curiamo ogni commessa come fosse la prima. Perché per noi non è solo lavoro — è un'eredità.</p>
+          <p>Non crediamo nei compromessi: ogni pezzo che esce dal nostro laboratorio porta con sÃ© l'esperienza di oltre 80 anni e l'impegno di chi ama veramente il proprio mestiere.</p>
+          <p>Lavoriamo solo con legni certificati FSC e CE, utilizziamo sistemi di posa innovativi come PosaClima, e curiamo ogni commessa come fosse la prima. PerchÃ© per noi non Ã¨ solo lavoro â Ã¨ un'ereditÃ .</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- OPERE · PRODUCT GRID -->
+  <!-- OPERE Â· PRODUCT GRID -->
   <section class="section--tight">
     <div class="wrap">
       <div class="meta-row">
-        <span class="eyebrow">Opere · 7 categorie</span>
+        <span class="eyebrow">Opere Â· 7 categorie</span>
         <span class="eyebrow">Su misura</span>
       </div>
       <div class="grid-3" style="row-gap: clamp(40px, 5vw, 80px);">
 
         <a class="product-card reveal" onclick="go('page-serramenti')">
           <div class="product-card__media"><img src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2016/06/finestre-legno.jpg" alt="Serramenti e balconi"></div>
-          <div class="product-card__row"><span>01 — Serramenti</span><span>Legno · Alluminio</span></div>
+          <div class="product-card__row"><span>01 â Serramenti</span><span>Legno Â· Alluminio</span></div>
           <h3 class="product-card__title">Serramenti<br>e balconi</h3>
         </a>
 
         <a class="product-card reveal" onclick="go('page-porte')">
           <div class="product-card__media"><img src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/06/portoncino-ingresso-legno-vetro.jpg" alt="Porte e portoncini"></div>
-          <div class="product-card__row"><span>02 — Porte</span><span>Ingresso · Interne</span></div>
+          <div class="product-card__row"><span>02 â Porte</span><span>Ingresso Â· Interne</span></div>
           <h3 class="product-card__title">Porte e<br>portoncini</h3>
         </a>
 
         <a class="product-card reveal" onclick="go('page-cucine')">
           <div class="product-card__media"><img src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/05/mobili-cucina-su-misura.jpg" alt="Cucine su misura"></div>
-          <div class="product-card__row"><span>03 — Cucine</span><span>Su misura</span></div>
+          <div class="product-card__row"><span>03 â Cucine</span><span>Su misura</span></div>
           <h3 class="product-card__title">Cucine<br>su misura</h3>
         </a>
 
         <a class="product-card reveal" onclick="go('page-mobili')">
           <div class="product-card__media"><img src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/05/mobili-soggiorno-su-misura.jpg" alt="Mobili su misura"></div>
-          <div class="product-card__row"><span>04 — Mobili</span><span>Armadi · Boiserie</span></div>
+          <div class="product-card__row"><span>04 â Mobili</span><span>Armadi Â· Boiserie</span></div>
           <h3 class="product-card__title">Mobili<br>su misura</h3>
         </a>
 
         <a class="product-card reveal" onclick="go('page-scale')">
           <div class="product-card__media"><img src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/05/scale-chiacciola-legno.jpg" alt="Scale e ringhiere"></div>
-          <div class="product-card__row"><span>05 — Scale</span><span>Chiocciola · Ringhiere</span></div>
+          <div class="product-card__row"><span>05 â Scale</span><span>Chiocciola Â· Ringhiere</span></div>
           <h3 class="product-card__title">Scale e<br>ringhiere</h3>
         </a>
 
         <a class="product-card reveal" onclick="go('page-giardino')">
           <div class="product-card__media"><img src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/05/arredo-giardino-su-misura.jpg" alt="Mobili da giardino"></div>
-          <div class="product-card__row"><span>06 — Giardino</span><span>Outdoor</span></div>
+          <div class="product-card__row"><span>06 â Giardino</span><span>Outdoor</span></div>
           <h3 class="product-card__title">Mobili<br>da giardino</h3>
         </a>
 
         <a class="product-card reveal" onclick="go('page-restauro')">
           <div class="product-card__media"><img src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/05/restauro-mobili-antichi.jpg" alt="Restauro mobili"></div>
-          <div class="product-card__row"><span>07 — Restauro</span><span>Mobili antichi</span></div>
+          <div class="product-card__row"><span>07 â Restauro</span><span>Mobili antichi</span></div>
           <h3 class="product-card__title">Restauro<br>e riparazione</h3>
         </a>
 
@@ -935,10 +930,10 @@ main { padding-top: var(--nav-h); }
     <div class="wrap">
       <div class="grid-2">
         <div class="reveal">
-          <span class="eyebrow">— Tre generazioni</span>
-          <h2 class="big" style="margin-top: 18px;">80+ anni di artigianalità veneta.</h2>
+          <span class="eyebrow">â Tre generazioni</span>
+          <h2 class="big" style="margin-top: 18px;">80+ anni di artigianalitÃ  veneta.</h2>
           <p class="lead" style="margin-top: 32px;">Fondata nel 1940 da Toni Barco, proseguita dai figli Imerio, Giuseppe, Luigi e Flavio. Oggi la terza generazione continua la missione: legno vero, mestiere autentico, relazioni sincere.</p>
-          <a class="btn" onclick="go('page-chi-siamo')" style="margin-top: 32px;">la nostra storia <span class="arrow">→</span></a>
+          <a class="btn" onclick="go('page-chi-siamo')" style="margin-top: 32px;">la nostra storia <span class="arrow">â</span></a>
         </div>
         <div class="reveal" style="aspect-ratio: 4/5; overflow:hidden; background: var(--cream-2);">
           <img src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/05/imerio-barco-marangon-1.jpg" alt="Imerio Barco marangon" style="width:100%; height:100%; object-fit:cover; filter: saturate(0.85);">
@@ -947,12 +942,12 @@ main { padding-top: var(--nav-h); }
     </div>
   </section>
 
-  <!-- TEAM · QUESTI SIAMO NOI -->
+  <!-- TEAM Â· QUESTI SIAMO NOI -->
   <section class="section">
     <div class="wrap">
       <div class="meta-row reveal">
-        <span class="eyebrow">— La squadra</span>
-        <span class="eyebrow">4 artigiani · Una famiglia</span>
+        <span class="eyebrow">â La squadra</span>
+        <span class="eyebrow">4 artigiani Â· Una famiglia</span>
       </div>
       <h2 class="big reveal" style="margin-top: 18px; max-width: 18ch;">Questi siamo noi.</h2>
       <p class="lead reveal" style="margin-top: 24px; max-width: 56ch;">Una squadra competente ed esperta al tuo servizio per gestire al meglio ogni commissione.</p>
@@ -961,7 +956,7 @@ main { padding-top: var(--nav-h); }
 
         <figure class="team-card reveal">
           <div class="team-card__media">
-            <img src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/05/falegnameria-barco-flavio-600x600.jpg" alt="Flavio Barco — legale rappresentante" style="width:100%; height:100%; object-fit:cover; filter: saturate(0.9);">
+            <img src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/05/falegnameria-barco-flavio-600x600.jpg" alt="Flavio Barco â legale rappresentante" style="width:100%; height:100%; object-fit:cover; filter: saturate(0.9);">
           </div>
           <figcaption>
             <div class="team-card__row"><span>01</span><span>Flavio Barco</span></div>
@@ -970,13 +965,13 @@ main { padding-top: var(--nav-h); }
             <ul class="list-naked team-card__meta">
               <li><span>Mobile</span><span>336 28 30 77</span></li>
             </ul>
-            <a class="btn team-card__cta" href="mailto:info@falegnameriabarco.it?subject=Scrivi%20a%20Flavio">scrivi a Flavio <span class="arrow">→</span></a>
+            <a class="btn team-card__cta" href="mailto:info@falegnameriabarco.it?subject=Scrivi%20a%20Flavio">scrivi a Flavio <span class="arrow">â</span></a>
           </figcaption>
         </figure>
 
         <figure class="team-card reveal">
           <div class="team-card__media">
-            <img src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/05/luca-barco-mobili-su-misura-600x600.jpg" alt="Luca Barco — responsabile installazioni" style="width:100%; height:100%; object-fit:cover; filter: saturate(0.9);">
+            <img src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/05/luca-barco-mobili-su-misura-600x600.jpg" alt="Luca Barco â responsabile installazioni" style="width:100%; height:100%; object-fit:cover; filter: saturate(0.9);">
           </div>
           <figcaption>
             <div class="team-card__row"><span>02</span><span>Luca Barco</span></div>
@@ -985,28 +980,28 @@ main { padding-top: var(--nav-h); }
             <ul class="list-naked team-card__meta">
               <li><span>Mobile</span><span>339 565 99 48</span></li>
             </ul>
-            <a class="btn team-card__cta" href="mailto:info@falegnameriabarco.it?subject=Scrivi%20a%20Luca">scrivi a Luca <span class="arrow">→</span></a>
+            <a class="btn team-card__cta" href="mailto:info@falegnameriabarco.it?subject=Scrivi%20a%20Luca">scrivi a Luca <span class="arrow">â</span></a>
           </figcaption>
         </figure>
 
         <figure class="team-card reveal">
           <div class="team-card__media">
-            <img src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/05/falegname-nicola-barco-600x600.jpg" alt="Nicola Barco — controllo qualità" style="width:100%; height:100%; object-fit:cover; filter: saturate(0.9);">
+            <img src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/05/falegname-nicola-barco-600x600.jpg" alt="Nicola Barco â controllo qualitÃ " style="width:100%; height:100%; object-fit:cover; filter: saturate(0.9);">
           </div>
           <figcaption>
             <div class="team-card__row"><span>03</span><span>Nicola Barco</span></div>
             <h3 class="team-card__name">Nicola</h3>
-            <p class="team-card__role">Controllo qualità<br>Produzione</p>
+            <p class="team-card__role">Controllo qualitÃ <br>Produzione</p>
             <ul class="list-naked team-card__meta">
               <li><span>Mobile</span><span>338 86 83 247</span></li>
             </ul>
-            <a class="btn team-card__cta" href="mailto:info@falegnameriabarco.it?subject=Scrivi%20a%20Nicola">scrivi a Nicola <span class="arrow">→</span></a>
+            <a class="btn team-card__cta" href="mailto:info@falegnameriabarco.it?subject=Scrivi%20a%20Nicola">scrivi a Nicola <span class="arrow">â</span></a>
           </figcaption>
         </figure>
 
         <figure class="team-card reveal">
           <div class="team-card__media">
-            <img src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/05/verniciatura-mobili-barco-federico-600x600.jpg" alt="Federico Barco — responsabile verniciatura" style="width:100%; height:100%; object-fit:cover; filter: saturate(0.9);">
+            <img src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/05/verniciatura-mobili-barco-federico-600x600.jpg" alt="Federico Barco â responsabile verniciatura" style="width:100%; height:100%; object-fit:cover; filter: saturate(0.9);">
           </div>
           <figcaption>
             <div class="team-card__row"><span>04</span><span>Federico Barco</span></div>
@@ -1015,7 +1010,7 @@ main { padding-top: var(--nav-h); }
             <ul class="list-naked team-card__meta">
               <li><span>Mobile</span><span>339 14 20 582</span></li>
             </ul>
-            <a class="btn team-card__cta" href="mailto:info@falegnameriabarco.it?subject=Scrivi%20a%20Federico">scrivi a Federico <span class="arrow">→</span></a>
+            <a class="btn team-card__cta" href="mailto:info@falegnameriabarco.it?subject=Scrivi%20a%20Federico">scrivi a Federico <span class="arrow">â</span></a>
           </figcaption>
         </figure>
 
@@ -1027,20 +1022,20 @@ main { padding-top: var(--nav-h); }
   <section class="section--tight">
     <div class="wrap center reveal">
       <h2 class="big">Parliamone.</h2>
-      <p class="lead" style="margin: 24px auto 40px;">Ogni progetto nasce da una conversazione. Ascoltiamo i tuoi spazi, comprendiamo i tuoi sogni, e realizziamo ciò che renderà la tua casa unica.</p>
-      <a class="btn btn--solid" onclick="go('page-contatti')">contattaci oggi <span class="arrow">→</span></a>
+      <p class="lead" style="margin: 24px auto 40px;">Ogni progetto nasce da una conversazione. Ascoltiamo i tuoi spazi, comprendiamo i tuoi sogni, e realizziamo ciÃ² che renderÃ  la tua casa unica.</p>
+      <a class="btn btn--solid" onclick="go('page-contatti')">contattaci oggi <span class="arrow">â</span></a>
     </div>
   </section>
 
 </div>
 
-<!-- ============================= PAGE · CHI SIAMO ============================= -->
+<!-- ============================= PAGE Â· CHI SIAMO ============================= -->
 <div class="page" data-page="page-chi-siamo">
   <section class="section section--hero">
     <div class="wrap">
       <div class="meta-row">
-        <span class="eyebrow">Atelier · La nostra storia</span>
-        <span class="eyebrow">Armedola · San Pietro in Gù</span>
+        <span class="eyebrow">Atelier Â· La nostra storia</span>
+        <span class="eyebrow">Armedola Â· San Pietro in GÃ¹</span>
         <span class="eyebrow">Dal 1940</span>
       </div>
       <h1 class="mega">La storia<br>di tre<br>generazioni.</h1>
@@ -1059,23 +1054,23 @@ main { padding-top: var(--nav-h); }
     <div class="wrap">
       <div class="grid-2">
         <div>
-          <span class="eyebrow reveal">— 1940</span>
+          <span class="eyebrow reveal">â 1940</span>
           <h2 class="big reveal" style="margin-top: 18px;">Come tutto ebbe inizio.</h2>
         </div>
         <div class="essay reveal">
-          <p>Il primo colpo di pialla lo tirò Toni Barco, ancora giovane, ad Armedola, una frazione di San Pietro in Gù. Era tra le due guerre mondiali, in un'epoca in cui le mani erano l'unico strumento e il legno si leggeva come un poeta legge un verso.</p>
-          <p>Non erano anni facili. Ma il suo mestiere gli permise di attraversare due guerre con dignità, realizzando ciò che la comunità gli chiedeva: serramenti, porte, mobili, arnesi. Oggetti necessari, costruiti per durare.</p>
-          <p>I suoi figli — Imerio, Giuseppe, Luigi e Flavio — non abbandonarono la bottega del marangon. La amplificarono. Assorbirono la pazienza del padre, la sua onestà nel costruire, e la trasmisero: ogni mobile doveva durare quanto una relazione, ogni finestra doveva proteggere come un abbraccio.</p>
+          <p>Il primo colpo di pialla lo tirÃ² Toni Barco, ancora giovane, ad Armedola, una frazione di San Pietro in GÃ¹. Era tra le due guerre mondiali, in un'epoca in cui le mani erano l'unico strumento e il legno si leggeva come un poeta legge un verso.</p>
+          <p>Non erano anni facili. Ma il suo mestiere gli permise di attraversare due guerre con dignitÃ , realizzando ciÃ² che la comunitÃ  gli chiedeva: serramenti, porte, mobili, arnesi. Oggetti necessari, costruiti per durare.</p>
+          <p>I suoi figli â Imerio, Giuseppe, Luigi e Flavio â non abbandonarono la bottega del marangon. La amplificarono. Assorbirono la pazienza del padre, la sua onestÃ  nel costruire, e la trasmisero: ogni mobile doveva durare quanto una relazione, ogni finestra doveva proteggere come un abbraccio.</p>
         </div>
       </div>
 
-      <div class="pullquote reveal">«Il legno non si tradisce — se lo tratti con rispetto, lui ti ripaga con bellezza e durata.»</div>
+      <div class="pullquote reveal">Â«Il legno non si tradisce â se lo tratti con rispetto, lui ti ripaga con bellezza e durata.Â»</div>
 
       <div class="grid-2">
         <div class="essay reveal">
           <p>Oggi la terza generazione cammina sugli stessi percorsi, utilizzando tecnologie nuove ma mantenendo intatta la filosofia antica. Nicola, Luca, Federico, Moreno: nomi che continuano il mestiere.</p>
-          <p>Siamo un'équipe di maestri artigiani, falegnami esperti, designer sensibili e operai che amano il loro mestiere. Non abbiamo catene di montaggio anonime: ogni progetto passa da più mani, ognuna esperta in una fase diversa.</p>
-          <p>Il risultato non è industriale. È personale.</p>
+          <p>Siamo un'Ã©quipe di maestri artigiani, falegnami esperti, designer sensibili e operai che amano il loro mestiere. Non abbiamo catene di montaggio anonime: ogni progetto passa da piÃ¹ mani, ognuna esperta in una fase diversa.</p>
+          <p>Il risultato non Ã¨ industriale. Ã personale.</p>
         </div>
         <div class="reveal" style="aspect-ratio: 4/5; overflow:hidden; background: var(--cream-2);">
           <img src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/05/verniciatura-mobili-barco-federico.jpg" alt="Federico Barco in verniciatura" style="width:100%; height:100%; object-fit:cover; filter: saturate(0.9);">
@@ -1088,15 +1083,15 @@ main { padding-top: var(--nav-h); }
   <section class="section--tight" style="border-top: 1px solid var(--line);">
     <div class="wrap">
       <div class="meta-row">
-        <span class="eyebrow">Valori · 5 principi</span>
+        <span class="eyebrow">Valori Â· 5 principi</span>
         <span class="eyebrow">Il nostro modo di fare</span>
       </div>
       <ul class="list-naked">
-        <li><span>01 — Onestà</span><span>Non promettiamo ciò che non possiamo mantenere. Parliamo il linguaggio della verità.</span></li>
-        <li><span>02 — Artigianalità</span><span>Ogni pezzo porta la firma di chi l'ha creato. Non anonimato, non serialità: mestiere consapevole.</span></li>
-        <li><span>03 — Sostenibilità</span><span>Solo legni certificati FSC, provenienti da foreste gestite responsabilmente.</span></li>
-        <li><span>04 — Relazione</span><span>Non fornitori, ma partner nel progettare la tua casa. Ascoltiamo, modifichiamo, adattiamo.</span></li>
-        <li><span>05 — Durata</span><span>Costruiamo per durare. Se un mobile è una moda, non lo facciamo.</span></li>
+        <li><span>01 â OnestÃ </span><span>Non promettiamo ciÃ² che non possiamo mantenere. Parliamo il linguaggio della veritÃ .</span></li>
+        <li><span>02 â ArtigianalitÃ </span><span>Ogni pezzo porta la firma di chi l'ha creato. Non anonimato, non serialitÃ : mestiere consapevole.</span></li>
+        <li><span>03 â SostenibilitÃ </span><span>Solo legni certificati FSC, provenienti da foreste gestite responsabilmente.</span></li>
+        <li><span>04 â Relazione</span><span>Non fornitori, ma partner nel progettare la tua casa. Ascoltiamo, modifichiamo, adattiamo.</span></li>
+        <li><span>05 â Durata</span><span>Costruiamo per durare. Se un mobile Ã¨ una moda, non lo facciamo.</span></li>
       </ul>
     </div>
   </section>
@@ -1105,22 +1100,22 @@ main { padding-top: var(--nav-h); }
     <div class="wrap center reveal">
       <h2 class="big">Vieni a trovarci.</h2>
       <p class="lead" style="margin: 24px auto 40px;">Puoi visitare il laboratorio, toccare i legni, vedere in azione il mestiere.</p>
-      <a class="btn btn--solid" onclick="go('page-contatti')">prenota una visita <span class="arrow">→</span></a>
+      <a class="btn btn--solid" onclick="go('page-contatti')">prenota una visita <span class="arrow">â</span></a>
     </div>
   </section>
 </div>
 
-<!-- ============================= PAGE · SERRAMENTI ============================= -->
+<!-- ============================= PAGE Â· SERRAMENTI ============================= -->
 <div class="page" data-page="page-serramenti">
   <section class="section section--hero">
     <div class="wrap">
       <div class="meta-row">
-        <span class="eyebrow">Opera 01 · Serramenti</span>
-        <span class="eyebrow">Legno · Alluminio</span>
+        <span class="eyebrow">Opera 01 Â· Serramenti</span>
+        <span class="eyebrow">Legno Â· Alluminio</span>
         <span class="eyebrow">Sistema PosaClima</span>
       </div>
       <h1 class="mega">Serramenti<br>e balconi.</h1>
-      <p class="lead" style="margin-top: 40px;">Finestre e portefinestre in legno e alluminio con sistema PosaClima. Isolamento termico e acustico senza compromessi, perché meriti il massimo dal tuo ambiente.</p>
+      <p class="lead" style="margin-top: 40px;">Finestre e portefinestre in legno e alluminio con sistema PosaClima. Isolamento termico e acustico senza compromessi, perchÃ© meriti il massimo dal tuo ambiente.</p>
     </div>
   </section>
 
@@ -1130,25 +1125,25 @@ main { padding-top: var(--nav-h); }
     <div class="wrap">
       <div class="feature-row reveal">
         <div class="feature-row__text">
-          <span class="feature-row__num">01 — Materiali nobili</span>
+          <span class="feature-row__num">01 â Materiali nobili</span>
           <h3>Legni certificati, trattamenti naturali.</h3>
-          <p>Utilizziamo le migliori essenze locali e importate: abete, larice, rovere, frassino, ciliegio. Ogni legno è certificato FSC, stagionato nel nostro laboratorio, lavorato con precisione artigianale.</p>
+          <p>Utilizziamo le migliori essenze locali e importate: abete, larice, rovere, frassino, ciliegio. Ogni legno Ã¨ certificato FSC, stagionato nel nostro laboratorio, lavorato con precisione artigianale.</p>
         </div>
         <div class="feature-row__media"><img src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2016/06/legno-massiccio-prima-qualita.jpg" alt=""></div>
       </div>
 
       <div class="feature-row feature-row--flip reveal">
         <div class="feature-row__text">
-          <span class="feature-row__num">02 — Sistema PosaClima</span>
+          <span class="feature-row__num">02 â Sistema PosaClima</span>
           <h3>L'isolamento che conta.</h3>
-          <p>Installiamo i nostri serramenti con il sistema PosaClima, lo standard europeo per la posa: isolamento termico massimale, controllo dell'umidità, sigillatura perfetta, performance acustica superiore.</p>
+          <p>Installiamo i nostri serramenti con il sistema PosaClima, lo standard europeo per la posa: isolamento termico massimale, controllo dell'umiditÃ , sigillatura perfetta, performance acustica superiore.</p>
         </div>
         <div class="feature-row__media"><img src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/06/balconi-in-legno-personalizzati.jpg" alt=""></div>
       </div>
 
       <div class="feature-row reveal">
         <div class="feature-row__text">
-          <span class="feature-row__num">03 — Legno + alluminio</span>
+          <span class="feature-row__num">03 â Legno + alluminio</span>
           <h3>Tradizione e tecnologia.</h3>
           <p>Legno puro per chi ama la tradizione, legno-alluminio coibentato per chi cerca zero manutenzione esterna senza rinunciare al calore interno. Consigliamo in base al tuo clima, alla tua estetica, al tuo stile di vita.</p>
         </div>
@@ -1159,31 +1154,31 @@ main { padding-top: var(--nav-h); }
 
   <section class="section--tight" style="border-top: 1px solid var(--line);">
     <div class="wrap">
-      <div class="meta-row"><span class="eyebrow">Processo · 5 fasi</span><span class="eyebrow">Dalla misura alla posa</span></div>
+      <div class="meta-row"><span class="eyebrow">Processo Â· 5 fasi</span><span class="eyebrow">Dalla misura alla posa</span></div>
       <ul class="list-naked">
-        <li><span>01 — Sopralluogo</span><span>Veniamo nella tua casa, misuriamo, comprendiamo spazi ed esigenze.</span></li>
-        <li><span>02 — Proposta</span><span>2–3 opzioni con materiali, colori, finiture e prezzi trasparenti.</span></li>
-        <li><span>03 — Lavorazione</span><span>Nel nostro laboratorio, con precisione millimetrica.</span></li>
-        <li><span>04 — Posa PosaClima</span><span>I nostri falegnami specializzati installano seguendo lo standard europeo.</span></li>
-        <li><span>05 — Collaudo</span><span>Verifichiamo ogni dettaglio. Tu verifichi. Poi la casa è tua.</span></li>
+        <li><span>01 â Sopralluogo</span><span>Veniamo nella tua casa, misuriamo, comprendiamo spazi ed esigenze.</span></li>
+        <li><span>02 â Proposta</span><span>2â3 opzioni con materiali, colori, finiture e prezzi trasparenti.</span></li>
+        <li><span>03 â Lavorazione</span><span>Nel nostro laboratorio, con precisione millimetrica.</span></li>
+        <li><span>04 â Posa PosaClima</span><span>I nostri falegnami specializzati installano seguendo lo standard europeo.</span></li>
+        <li><span>05 â Collaudo</span><span>Verifichiamo ogni dettaglio. Tu verifichi. Poi la casa Ã¨ tua.</span></li>
       </ul>
     </div>
   </section>
 
   <section class="section--tight">
     <div class="wrap center reveal">
-      <a class="btn btn--solid" onclick="go('page-contatti')">richiedi un preventivo <span class="arrow">→</span></a>
+      <a class="btn btn--solid" onclick="go('page-contatti')">richiedi un preventivo <span class="arrow">â</span></a>
     </div>
   </section>
 </div>
 
-<!-- ============================= PAGE · PORTE ============================= -->
+<!-- ============================= PAGE Â· PORTE ============================= -->
 <div class="page" data-page="page-porte">
   <section class="section section--hero">
     <div class="wrap">
-      <div class="meta-row"><span class="eyebrow">Opera 02 · Porte</span><span class="eyebrow">Ingresso · Interne</span><span class="eyebrow">5 essenze · 4 finiture</span></div>
+      <div class="meta-row"><span class="eyebrow">Opera 02 Â· Porte</span><span class="eyebrow">Ingresso Â· Interne</span><span class="eyebrow">5 essenze Â· 4 finiture</span></div>
       <h1 class="mega">Porte e<br>portoncini.</h1>
-      <p class="lead" style="margin-top: 40px;">Portoncini d'ingresso robusti e porte interne che raccontano la tua personalità. Lamellare, massello, essenze pregiate. Ogni porta è una firma stilistica.</p>
+      <p class="lead" style="margin-top: 40px;">Portoncini d'ingresso robusti e porte interne che raccontano la tua personalitÃ . Lamellare, massello, essenze pregiate. Ogni porta Ã¨ una firma stilistica.</p>
     </div>
   </section>
 
@@ -1193,7 +1188,7 @@ main { padding-top: var(--nav-h); }
     <div class="wrap">
       <div class="feature-row reveal">
         <div class="feature-row__text">
-          <span class="feature-row__num">01 — Porte d'ingresso</span>
+          <span class="feature-row__num">01 â Porte d'ingresso</span>
           <h3>Una prima impressione che resta.</h3>
           <p>Portoncini blindati rivestiti in legno pregiato, con pannelli intagliati, vetri artistici, ferramenta di sicurezza certificata. La porta che apre la tua casa deve dire chi sei.</p>
         </div>
@@ -1202,9 +1197,9 @@ main { padding-top: var(--nav-h); }
 
       <div class="feature-row feature-row--flip reveal">
         <div class="feature-row__text">
-          <span class="feature-row__num">02 — Porte interne</span>
-          <h3>Silenzio, carattere, continuità.</h3>
-          <p>Battenti, scorrevoli, a bilico, a scrigno: disegniamo ogni porta interna in armonia con gli ambienti. Finiture naturali, laccate, decapé. Dettagli che fanno la differenza quotidiana.</p>
+          <span class="feature-row__num">02 â Porte interne</span>
+          <h3>Silenzio, carattere, continuitÃ .</h3>
+          <p>Battenti, scorrevoli, a bilico, a scrigno: disegniamo ogni porta interna in armonia con gli ambienti. Finiture naturali, laccate, decapÃ©. Dettagli che fanno la differenza quotidiana.</p>
         </div>
         <div class="feature-row__media"><img src="https://images.unsplash.com/photo-1755488657807-098fc8643230?auto=format&fit=crop&w=1600&q=80" alt="Porte interne in legno scuro con maniglia circolare"></div>
       </div>
@@ -1213,7 +1208,7 @@ main { padding-top: var(--nav-h); }
 
   <section class="section--tight" style="border-top: 1px solid var(--line);">
     <div class="wrap">
-      <div class="meta-row"><span class="eyebrow">Essenze · 5 legni</span><span class="eyebrow">Su misura</span></div>
+      <div class="meta-row"><span class="eyebrow">Essenze Â· 5 legni</span><span class="eyebrow">Su misura</span></div>
       <ul class="list-naked">
         <li><span>Rovere</span><span>Nobile e longevo, per stili contemporanei.</span></li>
         <li><span>Noce</span><span>Scuro e prestigioso, carattere deciso.</span></li>
@@ -1224,16 +1219,16 @@ main { padding-top: var(--nav-h); }
     </div>
   </section>
 
-  <section class="section--tight"><div class="wrap center reveal"><a class="btn btn--solid" onclick="go('page-contatti')">richiedi un preventivo <span class="arrow">→</span></a></div></section>
+  <section class="section--tight"><div class="wrap center reveal"><a class="btn btn--solid" onclick="go('page-contatti')">richiedi un preventivo <span class="arrow">â</span></a></div></section>
 </div>
 
-<!-- ============================= PAGE · CUCINE ============================= -->
+<!-- ============================= PAGE Â· CUCINE ============================= -->
 <div class="page" data-page="page-cucine">
   <section class="section section--hero">
     <div class="wrap">
-      <div class="meta-row"><span class="eyebrow">Opera 03 · Cucine</span><span class="eyebrow">Moderno · Provenzale · Country · Shabby</span><span class="eyebrow">100% su misura</span></div>
+      <div class="meta-row"><span class="eyebrow">Opera 03 Â· Cucine</span><span class="eyebrow">Moderno Â· Provenzale Â· Country Â· Shabby</span><span class="eyebrow">100% su misura</span></div>
       <h1 class="mega">Cucine<br>su misura.</h1>
-      <p class="lead" style="margin-top: 40px;">Dallo stile moderno al provenzale, dalla country allo shabby chic: disegniamo la cucina che desideri, costruita per durare generazioni. Non mobili — spazi dove vivere.</p>
+      <p class="lead" style="margin-top: 40px;">Dallo stile moderno al provenzale, dalla country allo shabby chic: disegniamo la cucina che desideri, costruita per durare generazioni. Non mobili â spazi dove vivere.</p>
     </div>
   </section>
 
@@ -1243,7 +1238,7 @@ main { padding-top: var(--nav-h); }
     <div class="wrap">
       <div class="feature-row reveal">
         <div class="feature-row__text">
-          <span class="feature-row__num">01 — Progettazione</span>
+          <span class="feature-row__num">01 â Progettazione</span>
           <h3>Il tuo spazio, il tuo ritmo.</h3>
           <p>Ogni cucina nasce da un sopralluogo attento e da un dialogo vero. Misuriamo ogni centimetro, studiamo i flussi, i punti luce, i gesti quotidiani. Poi disegniamo una cucina che rispetti te.</p>
         </div>
@@ -1252,23 +1247,23 @@ main { padding-top: var(--nav-h); }
 
       <div class="feature-row feature-row--flip reveal">
         <div class="feature-row__text">
-          <span class="feature-row__num">02 — Stili</span>
+          <span class="feature-row__num">02 â Stili</span>
           <h3>Quattro anime, una firma.</h3>
-          <p>Moderno: linee pulite, essenze a vista, tecnologia integrata. Provenzale: bianco lavato, venature calde, aria di campagna francese. Country: legno massello, nodi e imperfezioni naturali. Shabby chic: patine decapé, dettagli vissuti, poesia quotidiana.</p>
+          <p>Moderno: linee pulite, essenze a vista, tecnologia integrata. Provenzale: bianco lavato, venature calde, aria di campagna francese. Country: legno massello, nodi e imperfezioni naturali. Shabby chic: patine decapÃ©, dettagli vissuti, poesia quotidiana.</p>
         </div>
         <div class="feature-row__media"><img src="https://images.unsplash.com/photo-1771888703722-ee7ad9143a67?auto=format&fit=crop&w=1600&q=80" alt="Cucina moderna con mobili in legno chiaro e isola"></div>
       </div>
     </div>
   </section>
 
-  <section class="section--tight"><div class="wrap center reveal"><a class="btn btn--solid" onclick="go('page-contatti')">progetta la tua cucina <span class="arrow">→</span></a></div></section>
+  <section class="section--tight"><div class="wrap center reveal"><a class="btn btn--solid" onclick="go('page-contatti')">progetta la tua cucina <span class="arrow">â</span></a></div></section>
 </div>
 
-<!-- ============================= PAGE · MOBILI ============================= -->
+<!-- ============================= PAGE Â· MOBILI ============================= -->
 <div class="page" data-page="page-mobili">
   <section class="section section--hero">
     <div class="wrap">
-      <div class="meta-row"><span class="eyebrow">Opera 04 · Mobili</span><span class="eyebrow">Armadi · Librerie · Boiserie</span><span class="eyebrow">Disegno sartoriale</span></div>
+      <div class="meta-row"><span class="eyebrow">Opera 04 Â· Mobili</span><span class="eyebrow">Armadi Â· Librerie Â· Boiserie</span><span class="eyebrow">Disegno sartoriale</span></div>
       <h1 class="mega">Mobili<br>su misura.</h1>
       <p class="lead" style="margin-top: 40px;">Armadi, librerie, boiserie, arredamenti completi pensati per il tuo spazio. Legno che si adatta, che evolve, che invecchia bellissimamente.</p>
     </div>
@@ -1280,7 +1275,7 @@ main { padding-top: var(--nav-h); }
     <div class="wrap">
       <div class="feature-row reveal">
         <div class="feature-row__text">
-          <span class="feature-row__num">01 — Cabine armadio</span>
+          <span class="feature-row__num">01 â Cabine armadio</span>
           <h3>Ogni cosa al suo posto, con grazia.</h3>
           <p>Disegniamo cabine armadio che sfruttano ogni centimetro disponibile: cassetti rallentati, appendiabiti illuminati, vani modulari. Il tuo guardaroba diventa una piccola boutique privata.</p>
         </div>
@@ -1289,16 +1284,16 @@ main { padding-top: var(--nav-h); }
 
       <div class="feature-row feature-row--flip reveal">
         <div class="feature-row__text">
-          <span class="feature-row__num">02 — Camere e camerette</span>
+          <span class="feature-row__num">02 â Camere e camerette</span>
           <h3>Stanze che crescono con te.</h3>
-          <p>Camere matrimoniali e camerette disegnate intorno alla vita vera. Letti con contenitori, scrivanie su misura, librerie integrate, pannelli fonoassorbenti. Ogni dettaglio pensato per chi ci dormirà.</p>
+          <p>Camere matrimoniali e camerette disegnate intorno alla vita vera. Letti con contenitori, scrivanie su misura, librerie integrate, pannelli fonoassorbenti. Ogni dettaglio pensato per chi ci dormirÃ .</p>
         </div>
         <div class="feature-row__media"><img src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/05/cameretta-su-misura.jpg" alt=""></div>
       </div>
 
       <div class="feature-row reveal">
         <div class="feature-row__text">
-          <span class="feature-row__num">03 — Ufficio e studio</span>
+          <span class="feature-row__num">03 â Ufficio e studio</span>
           <h3>Lavorare bene in un luogo bello.</h3>
           <p>Scrivanie, librerie, pareti attrezzate per lo studio di casa o lo spazio professionale. Ergonomia, gestione cavi, materiali nobili: il luogo dove pensi merita rispetto.</p>
         </div>
@@ -1307,16 +1302,16 @@ main { padding-top: var(--nav-h); }
     </div>
   </section>
 
-  <section class="section--tight"><div class="wrap center reveal"><a class="btn btn--solid" onclick="go('page-contatti')">parla del tuo progetto <span class="arrow">→</span></a></div></section>
+  <section class="section--tight"><div class="wrap center reveal"><a class="btn btn--solid" onclick="go('page-contatti')">parla del tuo progetto <span class="arrow">â</span></a></div></section>
 </div>
 
-<!-- ============================= PAGE · SCALE ============================= -->
+<!-- ============================= PAGE Â· SCALE ============================= -->
 <div class="page" data-page="page-scale">
   <section class="section section--hero">
     <div class="wrap">
-      <div class="meta-row"><span class="eyebrow">Opera 05 · Scale</span><span class="eyebrow">Chiocciola · Aperte · Ferro-legno</span><span class="eyebrow">Sculture funzionali</span></div>
+      <div class="meta-row"><span class="eyebrow">Opera 05 Â· Scale</span><span class="eyebrow">Chiocciola Â· Aperte Â· Ferro-legno</span><span class="eyebrow">Sculture funzionali</span></div>
       <h1 class="mega">Scale e<br>ringhiere.</h1>
-      <p class="lead" style="margin-top: 40px;">A chiocciola, aperte, in ferro e legno: ogni scala è una scultura funzionale. Salire diventa un gesto di eleganza.</p>
+      <p class="lead" style="margin-top: 40px;">A chiocciola, aperte, in ferro e legno: ogni scala Ã¨ una scultura funzionale. Salire diventa un gesto di eleganza.</p>
     </div>
   </section>
 
@@ -1326,32 +1321,32 @@ main { padding-top: var(--nav-h); }
     <div class="wrap">
       <div class="feature-row reveal">
         <div class="feature-row__text">
-          <span class="feature-row__num">01 — A chiocciola</span>
+          <span class="feature-row__num">01 â A chiocciola</span>
           <h3>Eleganza in poco spazio.</h3>
-          <p>La scala a chiocciola è l'arte di risolvere un vincolo con bellezza. Gradini sagomati a mano, colonna centrale in acciaio o legno, corrimano sinuoso. Funzionale, scultorea, indimenticabile.</p>
+          <p>La scala a chiocciola Ã¨ l'arte di risolvere un vincolo con bellezza. Gradini sagomati a mano, colonna centrale in acciaio o legno, corrimano sinuoso. Funzionale, scultorea, indimenticabile.</p>
         </div>
         <div class="feature-row__media"><img src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/05/scale-in-legno-su-misura.jpg" alt=""></div>
       </div>
 
       <div class="feature-row feature-row--flip reveal">
         <div class="feature-row__text">
-          <span class="feature-row__num">02 — Aperte e ferro-legno</span>
-          <h3>Tradizione incontra contemporaneità.</h3>
-          <p>Scale aperte con alzate sospese, strutture miste ferro-legno, ringhiere in vetro o tondino battuto. Ogni scala dialoga con l'architettura che la ospita — mai un oggetto imposto.</p>
+          <span class="feature-row__num">02 â Aperte e ferro-legno</span>
+          <h3>Tradizione incontra contemporaneitÃ .</h3>
+          <p>Scale aperte con alzate sospese, strutture miste ferro-legno, ringhiere in vetro o tondino battuto. Ogni scala dialoga con l'architettura che la ospita â mai un oggetto imposto.</p>
         </div>
         <div class="feature-row__media"><img src="https://images.unsplash.com/photo-1758800601206-11fe50fb1da8?auto=format&fit=crop&w=1600&q=80" alt="Scala moderna in legno con illuminazione calda"></div>
       </div>
     </div>
   </section>
 
-  <section class="section--tight"><div class="wrap center reveal"><a class="btn btn--solid" onclick="go('page-contatti')">richiedi un preventivo <span class="arrow">→</span></a></div></section>
+  <section class="section--tight"><div class="wrap center reveal"><a class="btn btn--solid" onclick="go('page-contatti')">richiedi un preventivo <span class="arrow">â</span></a></div></section>
 </div>
 
-<!-- ============================= PAGE · GIARDINO ============================= -->
+<!-- ============================= PAGE Â· GIARDINO ============================= -->
 <div class="page" data-page="page-giardino">
   <section class="section section--hero">
     <div class="wrap">
-      <div class="meta-row"><span class="eyebrow">Opera 06 · Giardino</span><span class="eyebrow">Outdoor</span><span class="eyebrow">Legno stagionato</span></div>
+      <div class="meta-row"><span class="eyebrow">Opera 06 Â· Giardino</span><span class="eyebrow">Outdoor</span><span class="eyebrow">Legno stagionato</span></div>
       <h1 class="mega">Mobili<br>da giardino.</h1>
       <p class="lead" style="margin-top: 40px;">Tavoli, sedie, panche in legno stagionato. L'estate si vive con stile, sotto gli alberi, su legno che respira con te.</p>
     </div>
@@ -1363,7 +1358,7 @@ main { padding-top: var(--nav-h); }
     <div class="wrap">
       <div class="feature-row reveal">
         <div class="feature-row__text">
-          <span class="feature-row__num">01 — Tavoli e panche</span>
+          <span class="feature-row__num">01 â Tavoli e panche</span>
           <h3>Convivi all'aria aperta.</h3>
           <p>Tavoli massicci in larice o rovere stagionato, panche abbinate, sedie resistenti. Finiture naturali che invecchiano con grazia, sviluppando quella patina argentata che solo il tempo sa dare.</p>
         </div>
@@ -1372,7 +1367,7 @@ main { padding-top: var(--nav-h); }
 
       <div class="feature-row feature-row--flip reveal">
         <div class="feature-row__text">
-          <span class="feature-row__num">02 — Pergole e strutture</span>
+          <span class="feature-row__num">02 â Pergole e strutture</span>
           <h3>Ombra che racconta.</h3>
           <p>Pergole, gazebi, casette e strutture da esterno progettate per durare decenni. Legno lamellare impregnato, ferramenta zincata, giunzioni tradizionali. Il tuo giardino come estensione del salotto.</p>
         </div>
@@ -1381,14 +1376,14 @@ main { padding-top: var(--nav-h); }
     </div>
   </section>
 
-  <section class="section--tight"><div class="wrap center reveal"><a class="btn btn--solid" onclick="go('page-contatti')">richiedi un preventivo <span class="arrow">→</span></a></div></section>
+  <section class="section--tight"><div class="wrap center reveal"><a class="btn btn--solid" onclick="go('page-contatti')">richiedi un preventivo <span class="arrow">â</span></a></div></section>
 </div>
 
-<!-- ============================= PAGE · RESTAURO ============================= -->
+<!-- ============================= PAGE Â· RESTAURO ============================= -->
 <div class="page" data-page="page-restauro">
   <section class="section section--hero">
     <div class="wrap">
-      <div class="meta-row"><span class="eyebrow">Opera 07 · Restauro</span><span class="eyebrow">Mobili antichi</span><span class="eyebrow">Tecniche tradizionali</span></div>
+      <div class="meta-row"><span class="eyebrow">Opera 07 Â· Restauro</span><span class="eyebrow">Mobili antichi</span><span class="eyebrow">Tecniche tradizionali</span></div>
       <h1 class="mega">Restauro<br>e riparazione.</h1>
       <p class="lead" style="margin-top: 40px;">Quel mobile della nonna merita una seconda vita. Sappiamo come dargliene una, con la stessa cura con cui fu creato.</p>
     </div>
@@ -1400,41 +1395,41 @@ main { padding-top: var(--nav-h); }
     <div class="wrap">
       <div class="grid-2">
         <div class="essay reveal">
-          <p>Un mobile antico non è solo legno e giunzioni. È memoria, storia, gesti familiari. Quando arriva da noi, lo trattiamo come tratteremmo un manoscritto prezioso: con rispetto, competenza e tempo.</p>
+          <p>Un mobile antico non Ã¨ solo legno e giunzioni. Ã memoria, storia, gesti familiari. Quando arriva da noi, lo trattiamo come tratteremmo un manoscritto prezioso: con rispetto, competenza e tempo.</p>
           <p>Il nostro approccio parte dall'ascolto. Studiamo il mobile, ne riconosciamo l'epoca, l'essenza, le tecniche costruttive originali. Decidiamo cosa salvare, cosa integrare, cosa lasciare invecchiare con grazia.</p>
-          <p>Usiamo colle animali, gommalacca, patine naturali, carte vetrate finissime. Strumenti che hanno attraversato generazioni, come il mobile stesso. Il risultato non è un oggetto nuovo: è un oggetto che ritrova la sua voce.</p>
+          <p>Usiamo colle animali, gommalacca, patine naturali, carte vetrate finissime. Strumenti che hanno attraversato generazioni, come il mobile stesso. Il risultato non Ã¨ un oggetto nuovo: Ã¨ un oggetto che ritrova la sua voce.</p>
         </div>
         <div class="reveal" style="aspect-ratio: 4/5; overflow:hidden; background: var(--cream-2);">
           <img src="https://www.falegnameriabarco.it/serramenti/wp-content/uploads/2017/06/riparazione-restauro-mobili.jpg" alt="" style="width:100%;height:100%;object-fit:cover;filter:saturate(0.9);">
         </div>
       </div>
 
-      <div class="pullquote reveal">«Il restauro è ascoltare un mobile che ha ancora qualcosa da dire.»</div>
+      <div class="pullquote reveal">Â«Il restauro Ã¨ ascoltare un mobile che ha ancora qualcosa da dire.Â»</div>
     </div>
   </section>
 
-  <section class="section--tight"><div class="wrap center reveal"><a class="btn btn--solid" onclick="go('page-contatti')">porta il tuo mobile <span class="arrow">→</span></a></div></section>
+  <section class="section--tight"><div class="wrap center reveal"><a class="btn btn--solid" onclick="go('page-contatti')">porta il tuo mobile <span class="arrow">â</span></a></div></section>
 </div>
 
-<!-- ============================= PAGE · MATERIALI ============================= -->
+<!-- ============================= PAGE Â· MATERIALI ============================= -->
 <div class="page" data-page="page-materiali">
   <section class="section section--hero">
     <div class="wrap">
-      <div class="meta-row"><span class="eyebrow">Materiali · 6 essenze</span><span class="eyebrow">Certificazioni FSC · CE</span><span class="eyebrow">Stagionati in atelier</span></div>
+      <div class="meta-row"><span class="eyebrow">Materiali Â· 6 essenze</span><span class="eyebrow">Certificazioni FSC Â· CE</span><span class="eyebrow">Stagionati in atelier</span></div>
       <h1 class="mega">Il legno<br>che usiamo.</h1>
-      <p class="lead" style="margin-top: 40px;">Lavoriamo solo con essenze selezionate, provenienti da foreste gestite responsabilmente. Ogni legno ha la sua personalità, il suo tempo, la sua destinazione.</p>
+      <p class="lead" style="margin-top: 40px;">Lavoriamo solo con essenze selezionate, provenienti da foreste gestite responsabilmente. Ogni legno ha la sua personalitÃ , il suo tempo, la sua destinazione.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap">
       <ul class="list-naked list-naked--wood">
-        <li><span>01 — Abete</span><span>Leggero, elegante, perfetto per stili classici e serramenti tradizionali.</span><div class="essence-circle"><img src="https://images.unsplash.com/photo-1572852515703-596a50742d44?auto=format&fit=crop&w=200&q=80" alt="Venatura abete"></div></li>
-        <li><span>02 — Larice</span><span>Robusto, ricco di resina, naturalmente resistente agli agenti atmosferici. Ideale per l'outdoor.</span><div class="essence-circle"><img src="https://images.unsplash.com/photo-1571205086863-9d186c5cb8fb?auto=format&fit=crop&w=200&q=80" alt="Venatura larice"></div></li>
-        <li><span>03 — Rovere</span><span>Nobile, longevo, versatile. Il legno dei progetti che vogliono durare decenni.</span><div class="essence-circle"><img src="https://images.unsplash.com/photo-1516557611744-cd25500edf64?auto=format&fit=crop&w=200&q=80" alt="Venatura rovere"></div></li>
-        <li><span>04 — Frassino</span><span>Resistente con venature espressive. Ottimo per pavimenti e strutture esposte.</span><div class="essence-circle"><img src="https://images.unsplash.com/photo-1688274165311-15de2165d686?auto=format&fit=crop&w=200&q=80" alt="Venatura frassino"></div></li>
-        <li><span>05 — Noce</span><span>Scuro, prestigioso, caldo. L'essenza dei mobili d'autore e degli ambienti sofisticati.</span><div class="essence-circle"><img src="https://images.unsplash.com/photo-1736506159893-22cca29b8018?auto=format&fit=crop&w=200&q=80" alt="Venatura noce"></div></li>
-        <li><span>06 — Ciliegio</span><span>Caldo, affascinante, con tonalità rossastre che maturano nel tempo.</span><div class="essence-circle"><img src="https://images.unsplash.com/photo-1677337919711-cf7c12825de0?auto=format&fit=crop&w=200&q=80" alt="Venatura ciliegio"></div></li>
+        <li><span>01 â Abete</span><span>Leggero, elegante, perfetto per stili classici e serramenti tradizionali.</span><div class="essence-circle"><img src="https://images.unsplash.com/photo-1572852515703-596a50742d44?auto=format&fit=crop&w=200&q=80" alt="Venatura abete"></div></li>
+        <li><span>02 â Larice</span><span>Robusto, ricco di resina, naturalmente resistente agli agenti atmosferici. Ideale per l'outdoor.</span><div class="essence-circle"><img src="https://images.unsplash.com/photo-1571205086863-9d186c5cb8fb?auto=format&fit=crop&w=200&q=80" alt="Venatura larice"></div></li>
+        <li><span>03 â Rovere</span><span>Nobile, longevo, versatile. Il legno dei progetti che vogliono durare decenni.</span><div class="essence-circle"><img src="https://images.unsplash.com/photo-1516557611744-cd25500edf64?auto=format&fit=crop&w=200&q=80" alt="Venatura rovere"></div></li>
+        <li><span>04 â Frassino</span><span>Resistente con venature espressive. Ottimo per pavimenti e strutture esposte.</span><div class="essence-circle"><img src="https://images.unsplash.com/photo-1688274165311-15de2165d686?auto=format&fit=crop&w=200&q=80" alt="Venatura frassino"></div></li>
+        <li><span>05 â Noce</span><span>Scuro, prestigioso, caldo. L'essenza dei mobili d'autore e degli ambienti sofisticati.</span><div class="essence-circle"><img src="https://images.unsplash.com/photo-1736506159893-22cca29b8018?auto=format&fit=crop&w=200&q=80" alt="Venatura noce"></div></li>
+        <li><span>06 â Ciliegio</span><span>Caldo, affascinante, con tonalitÃ  rossastre che maturano nel tempo.</span><div class="essence-circle"><img src="https://images.unsplash.com/photo-1677337919711-cf7c12825de0?auto=format&fit=crop&w=200&q=80" alt="Venatura ciliegio"></div></li>
       </ul>
     </div>
   </section>
@@ -1443,28 +1438,28 @@ main { padding-top: var(--nav-h); }
     <div class="wrap">
       <div class="grid-2">
         <div>
-          <span class="eyebrow reveal">— Certificazioni</span>
-          <h2 class="big reveal" style="margin-top: 18px;">FSC · CE · PosaClima.</h2>
+          <span class="eyebrow reveal">â Certificazioni</span>
+          <h2 class="big reveal" style="margin-top: 18px;">FSC Â· CE Â· PosaClima.</h2>
         </div>
         <div class="essay reveal">
-          <p>Tutti i nostri legni sono certificati <strong>FSC</strong> (Forest Stewardship Council): provengono da foreste gestite in modo responsabile, rispettando l'ambiente e le comunità locali.</p>
-          <p>Le nostre lavorazioni seguono gli standard <strong>CE</strong> europei per qualità, sicurezza e sostenibilità. I serramenti vengono installati con il sistema <strong>PosaClima</strong>, lo standard europeo per la posa certificata.</p>
-          <p>Non sono timbri da collezionare: sono il modo con cui rispettiamo il legno, chi lo produce, e chi lo riceverà.</p>
+          <p>Tutti i nostri legni sono certificati <strong>FSC</strong> (Forest Stewardship Council): provengono da foreste gestite in modo responsabile, rispettando l'ambiente e le comunitÃ  locali.</p>
+          <p>Le nostre lavorazioni seguono gli standard <strong>CE</strong> europei per qualitÃ , sicurezza e sostenibilitÃ . I serramenti vengono installati con il sistema <strong>PosaClima</strong>, lo standard europeo per la posa certificata.</p>
+          <p>Non sono timbri da collezionare: sono il modo con cui rispettiamo il legno, chi lo produce, e chi lo riceverÃ .</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section--tight"><div class="wrap center reveal"><a class="btn btn--solid" onclick="go('page-contatti')">parla con un artigiano <span class="arrow">→</span></a></div></section>
+  <section class="section--tight"><div class="wrap center reveal"><a class="btn btn--solid" onclick="go('page-contatti')">parla con un artigiano <span class="arrow">â</span></a></div></section>
 </div>
 
-<!-- ============================= PAGE · CONTATTI ============================= -->
+<!-- ============================= PAGE Â· CONTATTI ============================= -->
 <div class="page" data-page="page-contatti">
   <section class="section section--hero">
     <div class="wrap">
-      <div class="meta-row"><span class="eyebrow">Contatti</span><span class="eyebrow">Armedola · San Pietro in Gù (PD)</span><span class="eyebrow">Lun–Ven · 8:00–12:00 / 14:00–18:00</span></div>
+      <div class="meta-row"><span class="eyebrow">Contatti</span><span class="eyebrow">Armedola Â· San Pietro in GÃ¹ (PD)</span><span class="eyebrow">LunâVen Â· 8:00â12:00 / 14:00â18:00</span></div>
       <h1 class="mega">Parliamo<br>del tuo<br>progetto.</h1>
-      <p class="lead" style="margin-top: 40px;">Ogni lavoro inizia con una conversazione. Scrivici, chiamaci, oppure vieni a trovarci in laboratorio — il caffè è sempre pronto.</p>
+      <p class="lead" style="margin-top: 40px;">Ogni lavoro inizia con una conversazione. Scrivici, chiamaci, oppure vieni a trovarci in laboratorio â il caffÃ¨ Ã¨ sempre pronto.</p>
     </div>
   </section>
 
@@ -1473,23 +1468,23 @@ main { padding-top: var(--nav-h); }
       <div class="grid-2">
         <!-- Info col -->
         <div class="reveal">
-          <span class="eyebrow">— Atelier</span>
+          <span class="eyebrow">â Atelier</span>
           <h2 class="mid" style="margin-top: 18px;">Falegnameria Barco</h2>
-          <p style="margin-top: 24px; color: var(--ink-soft); max-width: 40ch;">Via Armedola, 50<br>35010 San Pietro in Gù (PD)<br>Veneto, Italia</p>
+          <p style="margin-top: 24px; color: var(--ink-soft); max-width: 40ch;">Via Armedola, 50<br>35010 San Pietro in GÃ¹ (PD)<br>Veneto, Italia</p>
 
           <div style="margin-top: 48px;">
-            <span class="eyebrow">— Contatti diretti</span>
+            <span class="eyebrow">â Contatti diretti</span>
             <ul class="list-naked" style="margin-top: 18px;">
               <li><span>Telefono</span><span>049 599 11 65</span></li>
               <li><span>Email</span><span>info@falegnameriabarco.it</span></li>
-              <li><span>Orari</span><span>Lun–Ven 8:00–12:00 · 14:00–18:00</span></li>
+              <li><span>Orari</span><span>LunâVen 8:00â12:00 Â· 14:00â18:00</span></li>
             </ul>
           </div>
         </div>
 
         <!-- Form col -->
         <div class="reveal">
-          <span class="eyebrow">— Richiedi un preventivo</span>
+          <span class="eyebrow">â Richiedi un preventivo</span>
           <h2 class="mid" style="margin-top: 18px;">Raccontaci cosa hai in mente.</h2>
           <form class="form" style="margin-top: 40px;" onsubmit="return handleSubmit(event)">
             <div><label>Nome e cognome</label><input type="text" required></div>
@@ -1497,7 +1492,7 @@ main { padding-top: var(--nav-h); }
             <div class="full"><label>Email</label><input type="email" required></div>
             <div class="full"><label>Di cosa hai bisogno?</label>
               <select required>
-                <option value="">— Seleziona —</option>
+                <option value="">â Seleziona â</option>
                 <option>Serramenti e balconi</option>
                 <option>Porte e portoncini</option>
                 <option>Cucina su misura</option>
@@ -1511,7 +1506,7 @@ main { padding-top: var(--nav-h); }
             </div>
             <div class="full"><label>Il tuo progetto</label><textarea rows="5" placeholder="Raccontaci lo spazio, i tempi, quello che hai in testa..."></textarea></div>
             <div class="full" style="margin-top: 8px;">
-              <button type="submit" class="btn btn--solid">invia richiesta <span class="arrow">→</span></button>
+              <button type="submit" class="btn btn--solid">invia richiesta <span class="arrow">â</span></button>
             </div>
           </form>
         </div>
@@ -1530,7 +1525,7 @@ main { padding-top: var(--nav-h); }
     <div class="footer__top">
       <div class="footer__col">
         <h4>Atelier</h4>
-        <p style="font-size: 14px; color: var(--ink-soft);">Via Armedola, 50<br>35010 San Pietro in Gù (PD)<br>Veneto, Italia<br><br>049 599 11 65<br>info@falegnameriabarco.it</p>
+        <p style="font-size: 14px; color: var(--ink-soft);">Via Armedola, 50<br>35010 San Pietro in GÃ¹ (PD)<br>Veneto, Italia<br><br>049 599 11 65<br>info@falegnameriabarco.it</p>
       </div>
       <div class="footer__col">
         <h4>Opere</h4>
@@ -1555,18 +1550,18 @@ main { padding-top: var(--nav-h); }
       <div class="footer__col">
         <h4>Orari</h4>
         <ul>
-          <li>Lun–Ven</li>
-          <li>8:00 — 12:00</li>
-          <li>14:00 — 18:00</li>
-          <li style="margin-top: 12px; color: var(--ink-mute);">Sab–Dom chiuso</li>
+          <li>LunâVen</li>
+          <li>8:00 â 12:00</li>
+          <li>14:00 â 18:00</li>
+          <li style="margin-top: 12px; color: var(--ink-mute);">SabâDom chiuso</li>
         </ul>
       </div>
     </div>
 
     <div class="footer__bottom">
-      <span>®26 Falegnameria Barco</span>
+      <span>Â®26 Falegnameria Barco</span>
       <span>Tre generazioni dal 1940</span>
-      <span>FSC · CE · PosaClima</span>
+      <span>FSC Â· CE Â· PosaClima</span>
     </div>
   </div>
 </footer>
@@ -1619,7 +1614,7 @@ function observeReveals() {
 function handleSubmit(e) {
   e.preventDefault();
   const btn = e.target.querySelector('button[type=submit]');
-  btn.textContent = 'inviato ✓';
+  btn.textContent = 'inviato â';
   btn.disabled = true;
   setTimeout(() => { e.target.reset(); btn.textContent = 'invia richiesta'; btn.disabled = false; }, 3500);
   return false;
@@ -1627,6 +1622,7 @@ function handleSubmit(e) {
 
 /* =========================================================
    Hero Portrait Slider — blur-bridge crossfade + Ken Burns
+   Ken Burns driven by Web Animations API for full control.
    ========================================================= */
 (function () {
   const slider = document.getElementById('heroSlider');
@@ -1642,25 +1638,50 @@ function handleSubmit(e) {
   ];
   let idx = 0;
   let timer = null;
-  const INTERVAL = 5500;
-  const CAPTION_SWAP = 260;
+  let kenBurns = null;
+  const INTERVAL = 6400;
+  const CAPTION_SWAP = 280;
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Strong ease-out curve (Emil / animations.dev recommended)
+  const EASE_OUT = 'cubic-bezier(0.22, 1, 0.36, 1)';
+
+  function startKenBurns(el) {
+    if (!el || prefersReduced) return;
+    if (kenBurns) {
+      try { kenBurns.cancel(); } catch (e) {}
+      kenBurns = null;
+    }
+    imgs.forEach((img) => {
+      if (img !== el) {
+        img.style.transform = 'scale(1.06)';
+      }
+    });
+    kenBurns = el.animate(
+      [
+        { transform: 'scale(1.06)', offset: 0 },
+        { transform: 'scale(1.00)', offset: 0.22 },
+        { transform: 'scale(1.05)', offset: 1 }
+      ],
+      {
+        duration: 9000,
+        easing: EASE_OUT,
+        fill: 'forwards'
+      }
+    );
+  }
 
   function go(i) {
     const next = (i + imgs.length) % imgs.length;
     if (next === idx) return;
     idx = next;
 
-    // Restart Ken Burns on the incoming image by forcing a reflow
     imgs.forEach((img, n) => {
-      if (n === idx) {
-        img.classList.remove('is-active');
-        void img.offsetWidth;
-        img.classList.add('is-active');
-      } else {
-        img.classList.remove('is-active');
-      }
+      img.classList.toggle('is-active', n === idx);
     });
     dots.forEach((d, n) => d.classList.toggle('is-active', n === idx));
+
+    startKenBurns(imgs[idx]);
 
     if (caption) {
       caption.classList.add('is-swapping');
@@ -1680,9 +1701,15 @@ function handleSubmit(e) {
   slider.addEventListener('mouseenter', stop);
   slider.addEventListener('mouseleave', start);
 
-  // Pause when tab is hidden — invisible edge case handling
+  // Pause when tab is hidden
   document.addEventListener('visibilitychange', () => {
-    if (document.hidden) stop(); else start();
+    if (document.hidden) {
+      stop();
+      if (kenBurns) { try { kenBurns.pause(); } catch (e) {} }
+    } else {
+      if (kenBurns) { try { kenBurns.play(); } catch (e) {} }
+      start();
+    }
   });
 
   // Keyboard: left/right when slider is focused
@@ -1692,6 +1719,8 @@ function handleSubmit(e) {
     if (e.key === 'ArrowRight') { go(idx + 1); start(); }
   });
 
+  // Kick off Ken Burns on the initial image
+  if (imgs[0]) startKenBurns(imgs[0]);
   start();
 })();
 
